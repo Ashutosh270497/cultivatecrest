@@ -263,13 +263,38 @@
             const container = document.getElementById('productDetailContainer');
             const discount = Math.round(((product.originalPrice - product.price) / product.originalPrice) * 100);
 
+            // Determine main image
+            const mainImage = product.image || (product.images && product.images[0]);
+            const hasImage = mainImage && mainImage.trim() !== '';
+            const galleryImages = product.images || [];
+
             container.innerHTML = `
                 <div class="product-images">
-                    <div class="main-image">
-                        <div class="image-placeholder product-image-large">
-                            <i class="fas ${product.icon}"></i>
-                        </div>
+                    <div class="main-image" id="mainImageContainer">
+                        ${hasImage ? `
+                            <img src="${mainImage}"
+                                 alt="${product.name}"
+                                 id="mainProductImage"
+                                 onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                            <div class="image-placeholder product-image-large" style="display:none;">
+                                <i class="fas ${product.icon}"></i>
+                            </div>
+                        ` : `
+                            <div class="image-placeholder product-image-large">
+                                <i class="fas ${product.icon}"></i>
+                            </div>
+                        `}
                     </div>
+                    ${galleryImages.length > 1 ? `
+                        <div class="image-gallery">
+                            ${galleryImages.map((img, index) => `
+                                <div class="gallery-thumbnail ${index === 0 ? 'active' : ''}"
+                                     onclick="changeMainImage('${img}', this)">
+                                    <img src="${img}" alt="${product.name} - Image ${index + 1}">
+                                </div>
+                            `).join('')}
+                        </div>
+                    ` : ''}
                 </div>
 
                 <div class="product-info">
@@ -374,6 +399,21 @@
                     </div>
                 `;
             }).join('');
+        }
+
+        // Function to change main product image
+        function changeMainImage(imageSrc, thumbnailElement) {
+            const mainImage = document.getElementById('mainProductImage');
+            if (mainImage) {
+                mainImage.src = imageSrc;
+
+                // Update active thumbnail
+                const allThumbnails = document.querySelectorAll('.gallery-thumbnail');
+                allThumbnails.forEach(thumb => thumb.classList.remove('active'));
+                if (thumbnailElement) {
+                    thumbnailElement.classList.add('active');
+                }
+            }
         }
     </script>
 </body>

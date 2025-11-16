@@ -65,12 +65,25 @@ function displayProducts(products, containerId = 'productGrid') {
 function createProductCard(product) {
     const discount = calculateDiscountPercentage(product.originalPrice, product.price);
 
+    // Determine if product has image or should use icon
+    const hasImage = product.image && product.image.trim() !== '';
+
     return `
         <div class="product-card" data-product-id="${product.id}">
             <div class="product-image">
-                <div class="image-placeholder">
-                    <i class="fas ${product.icon}"></i>
-                </div>
+                ${hasImage ? `
+                    <img src="${product.image}"
+                         alt="${product.name}"
+                         loading="lazy"
+                         onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                    <div class="image-placeholder" style="display:none;">
+                        <i class="fas ${product.icon}"></i>
+                    </div>
+                ` : `
+                    <div class="image-placeholder">
+                        <i class="fas ${product.icon}"></i>
+                    </div>
+                `}
                 ${discount > 0 ? `<span class="discount-badge">${discount}% OFF</span>` : ''}
             </div>
             <div class="product-details">

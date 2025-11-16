@@ -141,6 +141,14 @@
         height: 400px;
     }
 
+    .image-gallery {
+        grid-template-columns: repeat(auto-fill, minmax(80px, 1fr));
+    }
+
+    .gallery-thumbnail {
+        height: 80px;
+    }
+
     /* Why Grid */
     .why-grid {
         grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
@@ -296,6 +304,14 @@
     /* Product Detail */
     .product-images .main-image {
         height: 300px;
+    }
+
+    .image-gallery {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .gallery-thumbnail {
+        height: 70px;
     }
 
     .product-price .current-price {

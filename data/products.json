@@ -6,6 +6,15 @@
     "price": 299,
     "originalPrice": 499,
     "description": "Premium quality raw chia seeds sourced from the finest farms. Rich in omega-3 fatty acids, fiber, protein, and antioxidants. Perfect for smoothies, yogurt, oatmeal, and baking.",
+    "image": "images/products/chia_seeds/chia seeds1.jpg",
+    "images": [
+      "images/products/chia_seeds/chia seeds1.jpg",
+      "images/products/chia_seeds/chia seeds 2.jpg",
+      "images/products/chia_seeds/chia seeds 3.jpg",
+      "images/products/chia_seeds/chia seeds 5.jpg",
+      "images/products/chia_seeds/Benefits 6.jpg",
+      "images/products/chia_seeds/fssai 7.jpg"
+    ],
     "icon": "fa-seedling",
     "amazonLink": "https://www.amazon.in/s?k=chia+seeds",
     "variants": ["250g", "500g", "1kg"],
