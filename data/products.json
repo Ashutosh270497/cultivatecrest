@@ -1,0 +1,218 @@
+[
+  {
+    "id": 1,
+    "name": "Premium Raw Chia Seeds",
+    "category": "seeds",
+    "price": 299,
+    "originalPrice": 499,
+    "description": "Premium quality raw chia seeds sourced from the finest farms. Rich in omega-3 fatty acids, fiber, protein, and antioxidants. Perfect for smoothies, yogurt, oatmeal, and baking.",
+    "icon": "fa-seedling",
+    "amazonLink": "https://www.amazon.in/s?k=chia+seeds",
+    "variants": ["250g", "500g", "1kg"],
+    "benefits": [
+      "Highest plant-based source of omega-3 fatty acids",
+      "Rich in dietary fiber for digestive health",
+      "High-quality protein for muscle building",
+      "Loaded with antioxidants",
+      "Supports weight management and satiety"
+    ]
+  },
+  {
+    "id": 2,
+    "name": "Premium Raw Flax Seeds",
+    "category": "seeds",
+    "price": 249,
+    "originalPrice": 399,
+    "description": "High-quality raw flax seeds packed with nutrients. These golden brown seeds are an excellent source of omega-3, lignans, and fiber. Can be consumed whole or ground for better absorption.",
+    "icon": "fa-spa",
+    "amazonLink": "https://www.amazon.in/s?k=flax+seeds",
+    "variants": ["250g", "500g", "1kg"],
+    "benefits": [
+      "Excellent source of omega-3 ALA",
+      "High in lignans with antioxidant properties",
+      "May reduce cancer risk",
+      "Improves cholesterol levels",
+      "Helps lower blood pressure"
+    ]
+  },
+  {
+    "id": 3,
+    "name": "Roasted Pumpkin Seeds",
+    "category": "seeds",
+    "price": 349,
+    "originalPrice": 549,
+    "description": "Crunchy roasted pumpkin seeds with a delicious nutty flavor. Rich in magnesium, zinc, and healthy fats. Perfect as a snack or salad topping. No artificial additives or preservatives.",
+    "icon": "fa-leaf",
+    "amazonLink": "https://www.amazon.in/s?k=pumpkin+seeds",
+    "variants": ["200g", "500g"],
+    "benefits": [
+      "High in magnesium for muscle and nerve function",
+      "Rich in zinc for immune system support",
+      "Good source of plant-based iron",
+      "Contains antioxidants for heart health",
+      "Supports prostate health"
+    ]
+  },
+  {
+    "id": 4,
+    "name": "Organic Sunflower Seeds",
+    "category": "seeds",
+    "price": 199,
+    "originalPrice": 329,
+    "description": "Certified organic sunflower seeds packed with vitamin E and selenium. These crunchy seeds make a perfect healthy snack and can be added to salads, granola, or baked goods.",
+    "icon": "fa-sun",
+    "amazonLink": "https://www.amazon.in/s?k=sunflower+seeds",
+    "variants": ["250g", "500g"],
+    "benefits": [
+      "Extremely high in vitamin E",
+      "Rich in selenium for thyroid health",
+      "Contains healthy unsaturated fats",
+      "Good source of B vitamins",
+      "Anti-inflammatory properties"
+    ]
+  },
+  {
+    "id": 5,
+    "name": "Premium Almonds",
+    "category": "dry-fruits",
+    "price": 599,
+    "originalPrice": 799,
+    "description": "Premium California almonds, carefully selected for quality and freshness. Rich in protein, healthy fats, and vitamin E. Perfect for snacking or adding to your favorite recipes.",
+    "icon": "fa-apple-alt",
+    "amazonLink": "https://www.amazon.in/s?k=almonds",
+    "variants": ["250g", "500g", "1kg"],
+    "benefits": [
+      "High in vitamin E and antioxidants",
+      "Rich in healthy monounsaturated fats",
+      "Good source of plant-based protein",
+      "May help lower cholesterol",
+      "Supports brain health"
+    ]
+  },
+  {
+    "id": 6,
+    "name": "Premium Cashews",
+    "category": "dry-fruits",
+    "price": 549,
+    "originalPrice": 749,
+    "description": "Whole premium cashews with a creamy, buttery texture. Packed with healthy fats, copper, and magnesium. Perfect for snacking, cooking, or making cashew milk and butter.",
+    "icon": "fa-cookie-bite",
+    "amazonLink": "https://www.amazon.in/s?k=cashews",
+    "variants": ["250g", "500g", "1kg"],
+    "benefits": [
+      "Rich in copper for energy production",
+      "High in magnesium for bone health",
+      "Contains heart-healthy fats",
+      "Good source of iron",
+      "May support weight management"
+    ]
+  },
+  {
+    "id": 7,
+    "name": "Premium Walnuts",
+    "category": "dry-fruits",
+    "price": 649,
+    "originalPrice": 899,
+    "description": "Premium quality walnut halves and pieces, rich in omega-3 fatty acids. These brain-shaped nuts are perfect for supporting cognitive function and heart health.",
+    "icon": "fa-brain",
+    "amazonLink": "https://www.amazon.in/s?k=walnuts",
+    "variants": ["250g", "500g", "1kg"],
+    "benefits": [
+      "Highest omega-3 content among tree nuts",
+      "Supports brain health and cognition",
+      "Rich in antioxidants",
+      "May improve heart health",
+      "Anti-inflammatory properties"
+    ]
+  },
+  {
+    "id": 8,
+    "name": "Premium Raisins",
+    "category": "dry-fruits",
+    "price": 199,
+    "originalPrice": 299,
+    "description": "Sweet and chewy premium raisins, naturally sun-dried without any additives. Rich in iron, potassium, and natural sugars for quick energy. Perfect for baking or snacking.",
+    "icon": "fa-circle",
+    "amazonLink": "https://www.amazon.in/s?k=raisins",
+    "variants": ["250g", "500g", "1kg"],
+    "benefits": [
+      "High in iron for blood health",
+      "Rich in potassium",
+      "Natural source of quick energy",
+      "Contains beneficial plant compounds",
+      "Supports digestive health"
+    ]
+  },
+  {
+    "id": 9,
+    "name": "Dried Cranberries",
+    "category": "dry-fruits",
+    "price": 399,
+    "originalPrice": 549,
+    "description": "Tangy and sweet dried cranberries, lightly sweetened. Rich in antioxidants and vitamin C. Great for trail mixes, salads, or as a healthy snack.",
+    "icon": "fa-heart",
+    "amazonLink": "https://www.amazon.in/s?k=dried+cranberries",
+    "variants": ["200g", "500g"],
+    "benefits": [
+      "High in vitamin C and antioxidants",
+      "Supports urinary tract health",
+      "May improve heart health",
+      "Contains beneficial plant compounds",
+      "Good source of fiber"
+    ]
+  },
+  {
+    "id": 10,
+    "name": "Mixed Seeds Combo",
+    "category": "combo",
+    "price": 599,
+    "originalPrice": 899,
+    "description": "Perfect combination of chia, flax, pumpkin, and sunflower seeds. Get all the benefits of these superfoods in one convenient pack. Ideal for those starting their health journey.",
+    "icon": "fa-gift",
+    "amazonLink": "https://www.amazon.in/s?k=mixed+seeds",
+    "variants": ["500g (125g each)", "1kg (250g each)"],
+    "benefits": [
+      "Complete nutrition from multiple seeds",
+      "Variety of omega-3 fatty acids",
+      "Rich in minerals and vitamins",
+      "Perfect for beginners",
+      "Cost-effective wellness pack"
+    ]
+  },
+  {
+    "id": 11,
+    "name": "Premium Dry Fruits Mix",
+    "category": "combo",
+    "price": 799,
+    "originalPrice": 1199,
+    "description": "Deluxe assortment of premium almonds, cashews, walnuts, and raisins. Perfect gift pack or for those who want variety in their daily nutrition routine.",
+    "icon": "fa-boxes",
+    "amazonLink": "https://www.amazon.in/s?k=dry+fruits+mix",
+    "variants": ["500g", "1kg"],
+    "benefits": [
+      "Variety of nutrients from different nuts",
+      "Perfect for gifting",
+      "Energy-dense and nutritious",
+      "Supports overall health",
+      "Convenient all-in-one pack"
+    ]
+  },
+  {
+    "id": 12,
+    "name": "Organic Quinoa Seeds",
+    "category": "seeds",
+    "price": 399,
+    "originalPrice": 599,
+    "description": "Premium organic quinoa seeds, a complete protein source with all 9 essential amino acids. Gluten-free superfood perfect for salads, bowls, and as a rice alternative.",
+    "icon": "fa-seedling",
+    "amazonLink": "https://www.amazon.in/s?k=quinoa+seeds",
+    "variants": ["500g", "1kg"],
+    "benefits": [
+      "Complete protein with all essential amino acids",
+      "Gluten-free whole grain",
+      "High in fiber and minerals",
+      "Low glycemic index",
+      "Rich in antioxidants"
+    ]
+  }
+]

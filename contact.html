@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Contact CultivateCrest - Get in touch with us for any questions about our premium superfoods.">
+    <title>Contact Us - CultivateCrest</title>
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="images/favicon.png">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Questrial&family=Archivo:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- CSS Files -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/responsive.css">
+
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="header-container">
+            <!-- Mobile Menu Button -->
+            <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Open menu">
+                <i class="fas fa-bars"></i>
+            </button>
+
+            <!-- Logo -->
+            <div class="logo">
+                <a href="index.html">
+                    <h1>CultivateCrest</h1>
+                </a>
+            </div>
+
+            <!-- Navigation -->
+            <nav class="nav-menu" id="navMenu">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="index.html#products">Shop</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="contact.html" class="active">Contact</a></li>
+                </ul>
+            </nav>
+
+            <!-- Header Actions -->
+            <div class="header-actions">
+                <!-- Search -->
+                <div class="search-container">
+                    <button class="search-btn" id="searchBtn" aria-label="Search">
+                        <i class="fas fa-search"></i>
+                    </button>
+                    <div class="search-box" id="searchBox">
+                        <input type="text" id="searchInput" placeholder="Search for products...">
+                        <div class="search-results" id="searchResults"></div>
+                    </div>
+                </div>
+
+                <!-- WhatsApp Contact -->
+                <a href="https://wa.me/1234567890" class="icon-btn whatsapp-btn" aria-label="Contact on WhatsApp" target="_blank">
+                    <i class="fab fa-whatsapp"></i>
+                </a>
+            </div>
+        </div>
+
+        <!-- Mobile Menu Overlay -->
+        <div class="mobile-menu-overlay" id="mobileMenuOverlay"></div>
+
+        <!-- Mobile Menu Drawer -->
+        <div class="mobile-menu-drawer" id="mobileMenuDrawer">
+            <div class="mobile-menu-header">
+                <h2>Menu</h2>
+                <button class="close-menu-btn" id="closeMenuBtn" aria-label="Close menu">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <nav class="mobile-nav">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="index.html#products">Shop</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <h1>Contact Us</h1>
+            <p>We'd love to hear from you</p>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact-section">
+        <div class="container">
+            <div class="contact-grid">
+                <!-- Contact Information -->
+                <div class="contact-info">
+                    <h2>Get in Touch</h2>
+                    <p>Have questions about our products or need assistance? We're here to help!</p>
+
+                    <div class="contact-methods">
+                        <div class="contact-method">
+                            <i class="fas fa-envelope"></i>
+                            <div>
+                                <h3>Email</h3>
+                                <p>info@cultivatecrest.in</p>
+                                <p>support@cultivatecrest.in</p>
+                            </div>
+                        </div>
+
+                        <div class="contact-method">
+                            <i class="fas fa-phone"></i>
+                            <div>
+                                <h3>Phone</h3>
+                                <p>+91 123-456-7890</p>
+                                <p>Mon-Sat: 9 AM - 6 PM IST</p>
+                            </div>
+                        </div>
+
+                        <div class="contact-method">
+                            <i class="fab fa-whatsapp"></i>
+                            <div>
+                                <h3>WhatsApp</h3>
+                                <p>Quick support via WhatsApp</p>
+                                <a href="https://wa.me/1234567890" class="whatsapp-link" target="_blank">Chat with us</a>
+                            </div>
+                        </div>
+
+                        <div class="contact-method">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <div>
+                                <h3>Address</h3>
+                                <p>Mumbai, Maharashtra</p>
+                                <p>India</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="social-section">
+                        <h3>Follow Us</h3>
+                        <div class="social-links-large">
+                            <a href="https://facebook.com" target="_blank" aria-label="Facebook">
+                                <i class="fab fa-facebook"></i>
+                            </a>
+                            <a href="https://instagram.com" target="_blank" aria-label="Instagram">
+                                <i class="fab fa-instagram"></i>
+                            </a>
+                            <a href="https://twitter.com" target="_blank" aria-label="Twitter">
+                                <i class="fab fa-twitter"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Contact Form -->
+                <div class="contact-form-container">
+                    <h2>Send us a Message</h2>
+                    <form class="contact-form" id="contactForm">
+                        <div class="form-group">
+                            <label for="name">Name *</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="email">Email *</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="phone">Phone</label>
+                            <input type="tel" id="phone" name="phone">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="subject">Subject *</label>
+                            <input type="text" id="subject" name="subject" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="message">Message *</label>
+                            <textarea id="message" name="message" rows="5" required></textarea>
+                        </div>
+
+                        <button type="submit" class="btn btn-primary">Send Message</button>
+                        <p class="form-message" id="contactFormMessage"></p>
+                    </form>
+
+                    <div class="form-note">
+                        <p><strong>Note:</strong> To enable this contact form, you need to:</p>
+                        <ol>
+                            <li>Sign up for a free account at <a href="https://formspree.io" target="_blank">Formspree.io</a></li>
+                            <li>Get your form endpoint URL</li>
+                            <li>Update the form action in main.js</li>
+                        </ol>
+                        <p>See README.md for detailed instructions.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq-section">
+        <div class="container">
+            <h2>Frequently Asked Questions</h2>
+            <div class="faq-grid">
+                <div class="faq-item">
+                    <h3>How do I place an order?</h3>
+                    <p>Click on any product to view details, then click "Buy on Amazon" to complete your purchase securely through Amazon.</p>
+                </div>
+
+                <div class="faq-item">
+                    <h3>What are your delivery times?</h3>
+                    <p>Delivery times depend on Amazon's shipping. Typically, Prime members receive products within 1-2 days.</p>
+                </div>
+
+                <div class="faq-item">
+                    <h3>Are your products organic?</h3>
+                    <p>We offer a range of both organic and premium conventional products. Check individual product descriptions for details.</p>
+                </div>
+
+                <div class="faq-item">
+                    <h3>What is your return policy?</h3>
+                    <p>Returns are handled through Amazon's standard return policy. You can return products within 30 days of delivery.</p>
+                </div>
+
+                <div class="faq-item">
+                    <h3>Do you ship internationally?</h3>
+                    <p>Currently, we serve customers in India through Amazon. For international orders, please contact us directly.</p>
+                </div>
+
+                <div class="faq-item">
+                    <h3>How can I track my order?</h3>
+                    <p>After purchasing through Amazon, you'll receive tracking information directly from Amazon in your email.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <!-- About -->
+                <div class="footer-col">
+                    <h3>CultivateCrest</h3>
+                    <p>Your trusted source for premium superfoods and healthy living.</p>
+                    <div class="social-links">
+                        <a href="https://facebook.com" target="_blank" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+                        <a href="https://instagram.com" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="https://twitter.com" target="_blank" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                    </div>
+                </div>
+
+                <!-- Quick Links -->
+                <div class="footer-col">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="index.html#products">Shop</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+
+                <!-- Products -->
+                <div class="footer-col">
+                    <h4>Our Products</h4>
+                    <ul>
+                        <li><a href="index.html#products">Chia Seeds</a></li>
+                        <li><a href="index.html#products">Flax Seeds</a></li>
+                        <li><a href="index.html#products">Pumpkin Seeds</a></li>
+                        <li><a href="index.html#products">Dry Fruits</a></li>
+                    </ul>
+                </div>
+
+                <!-- Contact -->
+                <div class="footer-col">
+                    <h4>Contact Us</h4>
+                    <ul>
+                        <li><i class="fas fa-envelope"></i> info@cultivatecrest.in</li>
+                        <li><i class="fas fa-phone"></i> +91 123-456-7890</li>
+                        <li><i class="fab fa-whatsapp"></i> WhatsApp Support</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2024 CultivateCrest. All rights reserved.</p>
+                <p class="amazon-disclosure">Products are sold and fulfilled by Amazon. We may earn a commission from qualifying purchases.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript Files -->
+    <script src="js/main.js"></script>
+    <script src="js/search.js"></script>
+    <script src="js/mobile-menu.js"></script>
+</body>
+</html>

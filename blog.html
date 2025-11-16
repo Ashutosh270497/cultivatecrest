@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="CultivateCrest Blog - Learn about superfoods, health benefits, and nutrition tips.">
+    <title>Blog - CultivateCrest</title>
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="images/favicon.png">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Questrial&family=Archivo:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- CSS Files -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/responsive.css">
+
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="header-container">
+            <!-- Mobile Menu Button -->
+            <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Open menu">
+                <i class="fas fa-bars"></i>
+            </button>
+
+            <!-- Logo -->
+            <div class="logo">
+                <a href="index.html">
+                    <h1>CultivateCrest</h1>
+                </a>
+            </div>
+
+            <!-- Navigation -->
+            <nav class="nav-menu" id="navMenu">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="index.html#products">Shop</a></li>
+                    <li><a href="blog.html" class="active">Blog</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+
+            <!-- Header Actions -->
+            <div class="header-actions">
+                <!-- Search -->
+                <div class="search-container">
+                    <button class="search-btn" id="searchBtn" aria-label="Search">
+                        <i class="fas fa-search"></i>
+                    </button>
+                    <div class="search-box" id="searchBox">
+                        <input type="text" id="searchInput" placeholder="Search for products...">
+                        <div class="search-results" id="searchResults"></div>
+                    </div>
+                </div>
+
+                <!-- WhatsApp Contact -->
+                <a href="https://wa.me/1234567890" class="icon-btn whatsapp-btn" aria-label="Contact on WhatsApp" target="_blank">
+                    <i class="fab fa-whatsapp"></i>
+                </a>
+            </div>
+        </div>
+
+        <!-- Mobile Menu Overlay -->
+        <div class="mobile-menu-overlay" id="mobileMenuOverlay"></div>
+
+        <!-- Mobile Menu Drawer -->
+        <div class="mobile-menu-drawer" id="mobileMenuDrawer">
+            <div class="mobile-menu-header">
+                <h2>Menu</h2>
+                <button class="close-menu-btn" id="closeMenuBtn" aria-label="Close menu">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <nav class="mobile-nav">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="index.html#products">Shop</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <h1>Health & Nutrition Blog</h1>
+            <p>Learn about superfoods and healthy living</p>
+        </div>
+    </section>
+
+    <!-- Blog Grid -->
+    <section class="blog-section">
+        <div class="container">
+            <div class="blog-grid">
+                <!-- Blog Post 1 -->
+                <article class="blog-card">
+                    <div class="blog-image">
+                        <div class="image-placeholder">
+                            <i class="fas fa-seedling"></i>
+                        </div>
+                    </div>
+                    <div class="blog-content">
+                        <div class="blog-meta">
+                            <span class="blog-category">Nutrition</span>
+                            <span class="blog-date">Nov 15, 2024</span>
+                        </div>
+                        <h2>The Amazing Health Benefits of Chia Seeds</h2>
+                        <p>Discover why chia seeds are considered a superfood. Rich in omega-3 fatty acids, fiber, and antioxidants, these tiny seeds pack a powerful nutritional punch that can transform your health.</p>
+                        <div class="blog-benefits">
+                            <h3>Key Benefits:</h3>
+                            <ul>
+                                <li><i class="fas fa-check"></i> Rich in omega-3 fatty acids for heart health</li>
+                                <li><i class="fas fa-check"></i> High fiber content aids digestion</li>
+                                <li><i class="fas fa-check"></i> Packed with antioxidants</li>
+                                <li><i class="fas fa-check"></i> Excellent source of plant-based protein</li>
+                                <li><i class="fas fa-check"></i> Supports weight management</li>
+                            </ul>
+                        </div>
+                        <a href="index.html#products" class="btn btn-secondary">Shop Chia Seeds</a>
+                    </div>
+                </article>
+
+                <!-- Blog Post 2 -->
+                <article class="blog-card">
+                    <div class="blog-image">
+                        <div class="image-placeholder">
+                            <i class="fas fa-heart"></i>
+                        </div>
+                    </div>
+                    <div class="blog-content">
+                        <div class="blog-meta">
+                            <span class="blog-category">Wellness</span>
+                            <span class="blog-date">Nov 10, 2024</span>
+                        </div>
+                        <h2>Flax Seeds: Your Daily Dose of Nutrition</h2>
+                        <p>Flax seeds have been consumed for thousands of years and are one of the world's oldest superfoods. Learn how incorporating flax seeds into your diet can boost your overall health and wellbeing.</p>
+                        <div class="blog-benefits">
+                            <h3>Key Benefits:</h3>
+                            <ul>
+                                <li><i class="fas fa-check"></i> Highest plant-based source of omega-3</li>
+                                <li><i class="fas fa-check"></i> May reduce cancer risk</li>
+                                <li><i class="fas fa-check"></i> Improves cholesterol levels</li>
+                                <li><i class="fas fa-check"></i> Lowers blood pressure</li>
+                                <li><i class="fas fa-check"></i> Rich in lignans with antioxidant properties</li>
+                            </ul>
+                        </div>
+                        <a href="index.html#products" class="btn btn-secondary">Shop Flax Seeds</a>
+                    </div>
+                </article>
+
+                <!-- Blog Post 3 -->
+                <article class="blog-card">
+                    <div class="blog-image">
+                        <div class="image-placeholder">
+                            <i class="fas fa-dumbbell"></i>
+                        </div>
+                    </div>
+                    <div class="blog-content">
+                        <div class="blog-meta">
+                            <span class="blog-category">Fitness</span>
+                            <span class="blog-date">Nov 5, 2024</span>
+                        </div>
+                        <h2>Pumpkin Seeds: The Ultimate Post-Workout Snack</h2>
+                        <p>Looking for a nutritious post-workout snack? Pumpkin seeds are loaded with protein, healthy fats, and essential minerals that support muscle recovery and overall fitness.</p>
+                        <div class="blog-benefits">
+                            <h3>Key Benefits:</h3>
+                            <ul>
+                                <li><i class="fas fa-check"></i> High in magnesium for muscle function</li>
+                                <li><i class="fas fa-check"></i> Rich in zinc for immune support</li>
+                                <li><i class="fas fa-check"></i> Contains iron for energy</li>
+                                <li><i class="fas fa-check"></i> Good source of plant protein</li>
+                                <li><i class="fas fa-check"></i> Supports prostate health</li>
+                            </ul>
+                        </div>
+                        <a href="index.html#products" class="btn btn-secondary">Shop Pumpkin Seeds</a>
+                    </div>
+                </article>
+
+                <!-- Blog Post 4 -->
+                <article class="blog-card">
+                    <div class="blog-image">
+                        <div class="image-placeholder">
+                            <i class="fas fa-apple-alt"></i>
+                        </div>
+                    </div>
+                    <div class="blog-content">
+                        <div class="blog-meta">
+                            <span class="blog-category">Recipes</span>
+                            <span class="blog-date">Oct 28, 2024</span>
+                        </div>
+                        <h2>5 Easy Ways to Add Superfoods to Your Diet</h2>
+                        <p>Incorporating superfoods into your daily meals doesn't have to be complicated. Here are simple, delicious ways to boost your nutrition with chia seeds, flax seeds, and pumpkin seeds.</p>
+                        <div class="blog-benefits">
+                            <h3>Easy Ideas:</h3>
+                            <ul>
+                                <li><i class="fas fa-check"></i> Add chia seeds to smoothies and yogurt</li>
+                                <li><i class="fas fa-check"></i> Sprinkle ground flax on oatmeal or salads</li>
+                                <li><i class="fas fa-check"></i> Roast pumpkin seeds for a crunchy snack</li>
+                                <li><i class="fas fa-check"></i> Mix seeds into baked goods</li>
+                                <li><i class="fas fa-check"></i> Create homemade energy bars</li>
+                            </ul>
+                        </div>
+                        <a href="index.html#products" class="btn btn-secondary">Shop All Products</a>
+                    </div>
+                </article>
+
+                <!-- Blog Post 5 -->
+                <article class="blog-card">
+                    <div class="blog-image">
+                        <div class="image-placeholder">
+                            <i class="fas fa-brain"></i>
+                        </div>
+                    </div>
+                    <div class="blog-content">
+                        <div class="blog-meta">
+                            <span class="blog-category">Health</span>
+                            <span class="blog-date">Oct 20, 2024</span>
+                        </div>
+                        <h2>Superfoods for Brain Health and Mental Clarity</h2>
+                        <p>Your brain needs proper nutrition to function at its best. Learn how omega-3 rich seeds can support cognitive function, memory, and overall brain health throughout your life.</p>
+                        <div class="blog-benefits">
+                            <h3>Brain Benefits:</h3>
+                            <ul>
+                                <li><i class="fas fa-check"></i> Omega-3s support brain structure</li>
+                                <li><i class="fas fa-check"></i> Antioxidants protect brain cells</li>
+                                <li><i class="fas fa-check"></i> May improve memory and focus</li>
+                                <li><i class="fas fa-check"></i> Supports mental clarity</li>
+                                <li><i class="fas fa-check"></i> May reduce age-related cognitive decline</li>
+                            </ul>
+                        </div>
+                        <a href="index.html#products" class="btn btn-secondary">Shop Superfoods</a>
+                    </div>
+                </article>
+
+                <!-- Blog Post 6 -->
+                <article class="blog-card">
+                    <div class="blog-image">
+                        <div class="image-placeholder">
+                            <i class="fas fa-weight"></i>
+                        </div>
+                    </div>
+                    <div class="blog-content">
+                        <div class="blog-meta">
+                            <span class="blog-category">Weight Loss</span>
+                            <span class="blog-date">Oct 15, 2024</span>
+                        </div>
+                        <h2>How Seeds Can Support Your Weight Loss Journey</h2>
+                        <p>Looking to manage your weight naturally? Seeds are nutrient-dense, filling, and can help control appetite while providing essential nutrients your body needs during weight loss.</p>
+                        <div class="blog-benefits">
+                            <h3>Weight Loss Support:</h3>
+                            <ul>
+                                <li><i class="fas fa-check"></i> High fiber promotes fullness</li>
+                                <li><i class="fas fa-check"></i> Protein helps preserve muscle mass</li>
+                                <li><i class="fas fa-check"></i> Healthy fats support metabolism</li>
+                                <li><i class="fas fa-check"></i> Low in calories, high in nutrients</li>
+                                <li><i class="fas fa-check"></i> Helps stabilize blood sugar</li>
+                            </ul>
+                        </div>
+                        <a href="index.html#products" class="btn btn-secondary">Shop Now</a>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="container">
+            <h2>Ready to Start Your Health Journey?</h2>
+            <p>Explore our premium superfoods collection</p>
+            <a href="index.html#products" class="btn btn-primary">Shop Products</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <!-- About -->
+                <div class="footer-col">
+                    <h3>CultivateCrest</h3>
+                    <p>Your trusted source for premium superfoods and healthy living.</p>
+                    <div class="social-links">
+                        <a href="https://facebook.com" target="_blank" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+                        <a href="https://instagram.com" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="https://twitter.com" target="_blank" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                    </div>
+                </div>
+
+                <!-- Quick Links -->
+                <div class="footer-col">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="index.html#products">Shop</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+
+                <!-- Products -->
+                <div class="footer-col">
+                    <h4>Our Products</h4>
+                    <ul>
+                        <li><a href="index.html#products">Chia Seeds</a></li>
+                        <li><a href="index.html#products">Flax Seeds</a></li>
+                        <li><a href="index.html#products">Pumpkin Seeds</a></li>
+                        <li><a href="index.html#products">Dry Fruits</a></li>
+                    </ul>
+                </div>
+
+                <!-- Contact -->
+                <div class="footer-col">
+                    <h4>Contact Us</h4>
+                    <ul>
+                        <li><i class="fas fa-envelope"></i> info@cultivatecrest.in</li>
+                        <li><i class="fas fa-phone"></i> +91 123-456-7890</li>
+                        <li><i class="fab fa-whatsapp"></i> WhatsApp Support</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2024 CultivateCrest. All rights reserved.</p>
+                <p class="amazon-disclosure">Products are sold and fulfilled by Amazon. We may earn a commission from qualifying purchases.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript Files -->
+    <script src="js/main.js"></script>
+    <script src="js/search.js"></script>
+    <script src="js/mobile-menu.js"></script>
+</body>
+</html>

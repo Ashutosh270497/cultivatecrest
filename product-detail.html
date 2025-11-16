@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Product details - CultivateCrest Premium Superfoods">
+    <title>Product Details - CultivateCrest</title>
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="images/favicon.png">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Questrial&family=Archivo:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- CSS Files -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/responsive.css">
+
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="header-container">
+            <!-- Mobile Menu Button -->
+            <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Open menu">
+                <i class="fas fa-bars"></i>
+            </button>
+
+            <!-- Logo -->
+            <div class="logo">
+                <a href="index.html">
+                    <h1>CultivateCrest</h1>
+                </a>
+            </div>
+
+            <!-- Navigation -->
+            <nav class="nav-menu" id="navMenu">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="index.html#products">Shop</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+
+            <!-- Header Actions -->
+            <div class="header-actions">
+                <!-- Search -->
+                <div class="search-container">
+                    <button class="search-btn" id="searchBtn" aria-label="Search">
+                        <i class="fas fa-search"></i>
+                    </button>
+                    <div class="search-box" id="searchBox">
+                        <input type="text" id="searchInput" placeholder="Search for products...">
+                        <div class="search-results" id="searchResults"></div>
+                    </div>
+                </div>
+
+                <!-- WhatsApp Contact -->
+                <a href="https://wa.me/1234567890" class="icon-btn whatsapp-btn" aria-label="Contact on WhatsApp" target="_blank">
+                    <i class="fab fa-whatsapp"></i>
+                </a>
+            </div>
+        </div>
+
+        <!-- Mobile Menu Overlay -->
+        <div class="mobile-menu-overlay" id="mobileMenuOverlay"></div>
+
+        <!-- Mobile Menu Drawer -->
+        <div class="mobile-menu-drawer" id="mobileMenuDrawer">
+            <div class="mobile-menu-header">
+                <h2>Menu</h2>
+                <button class="close-menu-btn" id="closeMenuBtn" aria-label="Close menu">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <nav class="mobile-nav">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="index.html#products">Shop</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Breadcrumb -->
+    <div class="breadcrumb">
+        <div class="container">
+            <a href="index.html">Home</a>
+            <span>/</span>
+            <a href="index.html#products">Products</a>
+            <span>/</span>
+            <span id="productBreadcrumb">Product</span>
+        </div>
+    </div>
+
+    <!-- Product Detail Section -->
+    <section class="product-detail-section">
+        <div class="container">
+            <div class="product-detail-grid" id="productDetailContainer">
+                <!-- Content will be loaded dynamically by JavaScript -->
+                <div class="loading">Loading product details...</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Product Features -->
+    <section class="product-features-section" id="productFeaturesSection" style="display: none;">
+        <div class="container">
+            <h2>Why You'll Love This Product</h2>
+            <div class="features-grid">
+                <div class="feature-item">
+                    <i class="fas fa-certificate"></i>
+                    <h3>Premium Quality</h3>
+                    <p>Carefully selected and quality tested</p>
+                </div>
+                <div class="feature-item">
+                    <i class="fas fa-leaf"></i>
+                    <h3>100% Natural</h3>
+                    <p>No artificial additives or preservatives</p>
+                </div>
+                <div class="feature-item">
+                    <i class="fas fa-truck"></i>
+                    <h3>Fast Delivery</h3>
+                    <p>Quick shipping through Amazon Prime</p>
+                </div>
+                <div class="feature-item">
+                    <i class="fas fa-shield-alt"></i>
+                    <h3>Secure Purchase</h3>
+                    <p>Safe checkout via Amazon</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Related Products -->
+    <section class="related-products-section" id="relatedProductsSection" style="display: none;">
+        <div class="container">
+            <h2>You May Also Like</h2>
+            <div class="product-grid" id="relatedProducts">
+                <!-- Related products will be loaded by JavaScript -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <!-- About -->
+                <div class="footer-col">
+                    <h3>CultivateCrest</h3>
+                    <p>Your trusted source for premium superfoods and healthy living.</p>
+                    <div class="social-links">
+                        <a href="https://facebook.com" target="_blank" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+                        <a href="https://instagram.com" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="https://twitter.com" target="_blank" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                    </div>
+                </div>
+
+                <!-- Quick Links -->
+                <div class="footer-col">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="index.html#products">Shop</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+
+                <!-- Products -->
+                <div class="footer-col">
+                    <h4>Our Products</h4>
+                    <ul>
+                        <li><a href="index.html#products">Chia Seeds</a></li>
+                        <li><a href="index.html#products">Flax Seeds</a></li>
+                        <li><a href="index.html#products">Pumpkin Seeds</a></li>
+                        <li><a href="index.html#products">Dry Fruits</a></li>
+                    </ul>
+                </div>
+
+                <!-- Contact -->
+                <div class="footer-col">
+                    <h4>Contact Us</h4>
+                    <ul>
+                        <li><i class="fas fa-envelope"></i> info@cultivatecrest.in</li>
+                        <li><i class="fas fa-phone"></i> +91 123-456-7890</li>
+                        <li><i class="fab fa-whatsapp"></i> WhatsApp Support</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2024 CultivateCrest. All rights reserved.</p>
+                <p class="amazon-disclosure">Products are sold and fulfilled by Amazon. We may earn a commission from qualifying purchases.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript Files -->
+    <script src="js/main.js"></script>
+    <script src="js/products.js"></script>
+    <script src="js/search.js"></script>
+    <script src="js/mobile-menu.js"></script>
+
+    <!-- Product Detail Script -->
+    <script>
+        // Load product details based on URL parameter
+        document.addEventListener('DOMContentLoaded', function() {
+            const urlParams = new URLSearchParams(window.location.search);
+            const productId = urlParams.get('id');
+
+            if (!productId) {
+                window.location.href = 'index.html';
+                return;
+            }
+
+            loadProductDetail(productId);
+        });
+
+        async function loadProductDetail(productId) {
+            try {
+                const response = await fetch('data/products.json');
+                const products = await response.json();
+                const product = products.find(p => p.id == productId);
+
+                if (!product) {
+                    window.location.href = 'index.html';
+                    return;
+                }
+
+                displayProductDetail(product);
+                displayRelatedProducts(products, product.category, productId);
+
+                // Update breadcrumb
+                document.getElementById('productBreadcrumb').textContent = product.name;
+
+                // Update page title
+                document.title = `${product.name} - CultivateCrest`;
+
+                // Show sections
+                document.getElementById('productFeaturesSection').style.display = 'block';
+                document.getElementById('relatedProductsSection').style.display = 'block';
+            } catch (error) {
+                console.error('Error loading product:', error);
+                document.getElementById('productDetailContainer').innerHTML =
+                    '<p class="error">Error loading product details. Please try again later.</p>';
+            }
+        }
+
+        function displayProductDetail(product) {
+            const container = document.getElementById('productDetailContainer');
+            const discount = Math.round(((product.originalPrice - product.price) / product.originalPrice) * 100);
+
+            container.innerHTML = `
+                <div class="product-images">
+                    <div class="main-image">
+                        <div class="image-placeholder product-image-large">
+                            <i class="fas ${product.icon}"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product-info">
+                    <h1>${product.name}</h1>
+
+                    <div class="product-rating">
+                        <div class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                        </div>
+                        <span class="rating-text">4.5 (250+ reviews on Amazon)</span>
+                    </div>
+
+                    <div class="product-price">
+                        <span class="current-price">₹${product.price}</span>
+                        <span class="original-price">₹${product.originalPrice}</span>
+                        <span class="discount-badge">${discount}% OFF</span>
+                    </div>
+
+                    <div class="product-description">
+                        <h3>About this product</h3>
+                        <p>${product.description}</p>
+                    </div>
+
+                    <div class="product-benefits">
+                        <h3>Key Benefits</h3>
+                        <ul>
+                            ${product.benefits.map(benefit => `<li><i class="fas fa-check"></i> ${benefit}</li>`).join('')}
+                        </ul>
+                    </div>
+
+                    <div class="product-variants">
+                        <h3>Size</h3>
+                        <div class="variant-options">
+                            ${product.variants ? product.variants.map(variant =>
+                                `<button class="variant-btn">${variant}</button>`
+                            ).join('') : '<button class="variant-btn active">500g</button>'}
+                        </div>
+                    </div>
+
+                    <div class="product-actions">
+                        <a href="${product.amazonLink}" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-large">
+                            <i class="fab fa-amazon"></i> Buy on Amazon
+                        </a>
+                        <p class="amazon-note">
+                            <i class="fas fa-info-circle"></i>
+                            You'll be redirected to Amazon for secure checkout
+                        </p>
+                    </div>
+
+                    <div class="product-highlights">
+                        <div class="highlight">
+                            <i class="fas fa-shipping-fast"></i>
+                            <span>Fast delivery with Amazon Prime</span>
+                        </div>
+                        <div class="highlight">
+                            <i class="fas fa-undo-alt"></i>
+                            <span>Easy returns within 30 days</span>
+                        </div>
+                        <div class="highlight">
+                            <i class="fas fa-lock"></i>
+                            <span>Secure payment via Amazon</span>
+                        </div>
+                    </div>
+                </div>
+            `;
+        }
+
+        function displayRelatedProducts(allProducts, category, currentProductId) {
+            const relatedProducts = allProducts
+                .filter(p => p.category === category && p.id != currentProductId)
+                .slice(0, 4);
+
+            if (relatedProducts.length === 0) {
+                document.getElementById('relatedProductsSection').style.display = 'none';
+                return;
+            }
+
+            const container = document.getElementById('relatedProducts');
+            container.innerHTML = relatedProducts.map(product => {
+                const discount = Math.round(((product.originalPrice - product.price) / product.originalPrice) * 100);
+                return `
+                    <div class="product-card">
+                        <div class="product-image">
+                            <div class="image-placeholder">
+                                <i class="fas ${product.icon}"></i>
+                            </div>
+                            ${discount > 0 ? `<span class="discount-badge">${discount}% OFF</span>` : ''}
+                        </div>
+                        <div class="product-details">
+                            <h3 class="product-name">${product.name}</h3>
+                            <div class="product-price">
+                                <span class="current-price">₹${product.price}</span>
+                                ${product.originalPrice > product.price ?
+                                    `<span class="original-price">₹${product.originalPrice}</span>` : ''}
+                            </div>
+                            <a href="product-detail.html?id=${product.id}" class="btn btn-secondary">View Details</a>
+                        </div>
+                    </div>
+                `;
+            }).join('');
+        }
+    </script>
+</body>
+</html>
