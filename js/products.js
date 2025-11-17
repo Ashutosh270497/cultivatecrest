@@ -27,9 +27,12 @@ async function loadProducts() {
         }
 
         const products = await response.json();
-        allProducts = products; // Store for search functionality
 
-        displayProducts(products);
+        // Filter to show only active products
+        const activeProducts = products.filter(product => product.active !== false);
+        allProducts = activeProducts; // Store for search functionality
+
+        displayProducts(activeProducts);
     } catch (error) {
         console.error('Error loading products:', error);
         productGrid.innerHTML = `
