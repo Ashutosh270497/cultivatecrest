@@ -60,6 +60,9 @@ function displayProducts(products, containerId = 'productGrid') {
     }
 
     container.innerHTML = products.map(product => createProductCard(product)).join('');
+
+    // Dispatch event to notify that products have been updated
+    window.dispatchEvent(new Event('productsUpdated'));
 }
 
 /**
@@ -68,25 +71,43 @@ function displayProducts(products, containerId = 'productGrid') {
 function createProductCard(product) {
     const discount = calculateDiscountPercentage(product.originalPrice, product.price);
 
-    // Determine if product has image or should use icon
-    const hasImage = product.image && product.image.trim() !== '';
+    // Get images array or fallback to single image
+    const images = product.images && product.images.length > 0 ? product.images : (product.image ? [product.image] : []);
+    const hasImages = images.length > 0;
+
+    // Create slider HTML for multiple images
+    let imageSliderHTML = '';
+    if (hasImages) {
+        imageSliderHTML = `
+            <div class="product-image-slider" data-product-id="${product.id}">
+                ${images.map((img, index) => `
+                    <img src="${img}"
+                         alt="${product.name} - Image ${index + 1}"
+                         class="slider-image ${index === 0 ? 'active' : ''}"
+                         loading="lazy"
+                         onerror="this.style.display='none';">
+                `).join('')}
+            </div>
+            ${images.length > 1 ? `
+                <div class="slider-indicators">
+                    ${images.map((_, index) => `
+                        <span class="indicator ${index === 0 ? 'active' : ''}" data-index="${index}"></span>
+                    `).join('')}
+                </div>
+            ` : ''}
+        `;
+    } else {
+        imageSliderHTML = `
+            <div class="image-placeholder">
+                <i class="fas ${product.icon}"></i>
+            </div>
+        `;
+    }
 
     return `
         <div class="product-card" data-product-id="${product.id}">
             <div class="product-image">
-                ${hasImage ? `
-                    <img src="${product.image}"
-                         alt="${product.name}"
-                         loading="lazy"
-                         onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
-                    <div class="image-placeholder" style="display:none;">
-                        <i class="fas ${product.icon}"></i>
-                    </div>
-                ` : `
-                    <div class="image-placeholder">
-                        <i class="fas ${product.icon}"></i>
-                    </div>
-                `}
+                ${imageSliderHTML}
                 ${discount > 0 ? `<span class="discount-badge">${discount}% OFF</span>` : ''}
             </div>
             <div class="product-details">
