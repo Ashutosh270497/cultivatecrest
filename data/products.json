@@ -125,8 +125,8 @@
     "id": 4,
     "name": "Organic Sunflower Seeds",
     "category": "seeds",
-    "price": 199,
-    "originalPrice": 329,
+    "price": 139,
+    "originalPrice": 240,
     "active": true,
     "description": "Certified organic sunflower seeds packed with vitamin E and selenium. These crunchy seeds make a perfect healthy snack and can be added to salads, granola, or baked goods.",
     "image": "images/products/Sunflower_Seeds/sun_seeds_7.png",
@@ -146,7 +146,19 @@
     ],
     "icon": "fa-sun",
     "amazonLink": "https://amzn.to/4pfhuHQ",
-    "variants": ["250g", "500g"],
+    "variants": ["200g", "500g"],
+    "variantPricing": {
+      "200g": {
+        "price": 139,
+        "originalPrice": 240,
+        "discount": 42
+      },
+      "500g": {
+        "price": 341,
+        "originalPrice": 502,
+        "discount": 32
+      }
+    },
     "benefits": [
       "Extremely high in vitamin E",
       "Rich in selenium for thyroid health",
