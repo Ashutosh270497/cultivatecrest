@@ -84,8 +84,8 @@
     "id": 3,
     "name": "Roasted Pumpkin Seeds",
     "category": "seeds",
-    "price": 349,
-    "originalPrice": 549,
+    "price": 241,
+    "originalPrice": 339,
     "active": true,
     "description": "Crunchy roasted pumpkin seeds with a delicious nutty flavor. Rich in magnesium, zinc, and healthy fats. Perfect as a snack or salad topping. No artificial additives or preservatives.",
     "image": "images/products/Pumpkin_Seeds/pump_seeds_1.png",
@@ -101,6 +101,18 @@
     "icon": "fa-leaf",
     "amazonLink": "https://amzn.to/4r2TSaR",
     "variants": ["200g", "500g"],
+    "variantPricing": {
+      "200g": {
+        "price": 241,
+        "originalPrice": 339,
+        "discount": 29
+      },
+      "500g": {
+        "price": 551,
+        "originalPrice": 697,
+        "discount": 21
+      }
+    },
     "benefits": [
       "High in magnesium for muscle and nerve function",
       "Rich in zinc for immune system support",
