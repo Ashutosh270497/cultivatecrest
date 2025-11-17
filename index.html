@@ -93,12 +93,85 @@
         </div>
     </header>
 
-    <!-- Hero Section -->
-    <section class="hero">
-        <div class="hero-content">
-            <h2 class="hero-title">Premium Superfoods for a Healthier You</h2>
-            <p class="hero-subtitle">Discover our collection of high-quality dry fruits, seeds, and superfoods</p>
-            <a href="#products" class="btn btn-primary">Shop Now</a>
+    <!-- Hero Banner Slider -->
+    <section class="hero-slider">
+        <div class="slider-container">
+            <!-- Slide 1: Main CTA -->
+            <div class="hero-slide active" data-slide="1">
+                <div class="slide-background slide-bg-1"></div>
+                <div class="slide-content">
+                    <div class="container">
+                        <span class="slide-badge">🌟 Premium Quality</span>
+                        <h1 class="slide-title">Transform Your Health with<br>Nature's Finest Superfoods</h1>
+                        <p class="slide-subtitle">100% Organic • Lab Tested • FSSAI Certified</p>
+                        <div class="slide-cta">
+                            <a href="#products" class="btn btn-primary btn-large">Shop All Products</a>
+                            <a href="about.html" class="btn btn-secondary btn-large">Learn More</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Slide 2: Discount Offer -->
+            <div class="hero-slide" data-slide="2">
+                <div class="slide-background slide-bg-2"></div>
+                <div class="slide-content">
+                    <div class="container">
+                        <span class="slide-badge">🎁 Limited Time Offer</span>
+                        <h1 class="slide-title">Get Up To 40% OFF<br>On Premium Seeds</h1>
+                        <p class="slide-subtitle">Chia • Flax • Pumpkin • Sunflower Seeds</p>
+                        <div class="slide-cta">
+                            <a href="#products" class="btn btn-primary btn-large">Grab the Deal</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Slide 3: Free Shipping -->
+            <div class="hero-slide" data-slide="3">
+                <div class="slide-background slide-bg-3"></div>
+                <div class="slide-content">
+                    <div class="container">
+                        <span class="slide-badge">🚚 Free Delivery</span>
+                        <h1 class="slide-title">Free Shipping on Orders<br>Above ₹499</h1>
+                        <p class="slide-subtitle">Pan India Delivery • Secure Packaging • Quick Dispatch</p>
+                        <div class="slide-cta">
+                            <a href="#products" class="btn btn-primary btn-large">Start Shopping</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Slide 4: Amazon Link -->
+            <div class="hero-slide" data-slide="4">
+                <div class="slide-background slide-bg-4"></div>
+                <div class="slide-content">
+                    <div class="container">
+                        <span class="slide-badge">🛒 Now on Amazon</span>
+                        <h1 class="slide-title">Shop Our Premium Seeds<br>On Amazon India</h1>
+                        <p class="slide-subtitle">Fast Delivery • Easy Returns • Trusted Platform</p>
+                        <div class="slide-cta">
+                            <a href="https://www.amazon.in/s?k=cultivatecrest" target="_blank" class="btn btn-primary btn-large">Shop on Amazon</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slider Navigation -->
+        <button class="slider-nav slider-prev" aria-label="Previous slide">
+            <i class="fas fa-chevron-left"></i>
+        </button>
+        <button class="slider-nav slider-next" aria-label="Next slide">
+            <i class="fas fa-chevron-right"></i>
+        </button>
+
+        <!-- Slider Dots -->
+        <div class="slider-dots">
+            <span class="dot active" data-slide="1"></span>
+            <span class="dot" data-slide="2"></span>
+            <span class="dot" data-slide="3"></span>
+            <span class="dot" data-slide="4"></span>
         </div>
     </section>
 
@@ -220,6 +293,7 @@
 
     <!-- JavaScript Files -->
     <script src="js/main.js"></script>
+    <script src="js/banner-slider.js"></script>
     <script src="js/products.js"></script>
     <script src="js/product-slider.js"></script>
     <script src="js/search.js"></script>
