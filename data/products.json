@@ -43,8 +43,8 @@
     "id": 2,
     "name": "Premium Raw Flax Seeds",
     "category": "seeds",
-    "price": 249,
-    "originalPrice": 399,
+    "price": 99,
+    "originalPrice": 198,
     "active": true,
     "description": "High-quality raw flax seeds packed with nutrients. These golden brown seeds are an excellent source of omega-3, lignans, and fiber. Can be consumed whole or ground for better absorption.",
     "image": "images/products/Flax_Seeds/flax_seeds_1.png",
@@ -59,7 +59,19 @@
     ],
     "icon": "fa-spa",
     "amazonLink": "https://amzn.to/446R8PX",
-    "variants": ["250g", "500g", "1kg"],
+    "variants": ["200g", "500g"],
+    "variantPricing": {
+      "200g": {
+        "price": 99,
+        "originalPrice": 198,
+        "discount": 50
+      },
+      "500g": {
+        "price": 241,
+        "originalPrice": 402,
+        "discount": 40
+      }
+    },
     "benefits": [
       "Excellent source of omega-3 ALA",
       "High in lignans with antioxidant properties",
