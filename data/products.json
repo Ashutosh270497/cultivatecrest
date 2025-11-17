@@ -3,8 +3,8 @@
     "id": 1,
     "name": "Premium Raw Chia Seeds",
     "category": "seeds",
-    "price": 299,
-    "originalPrice": 499,
+    "price": 181,
+    "originalPrice": 248,
     "active": true,
     "description": "Premium quality raw chia seeds sourced from the finest farms. Rich in omega-3 fatty acids, fiber, protein, and antioxidants. Perfect for smoothies, yogurt, oatmeal, and baking.",
     "image": "images/products/Chia_Seeds/chia_seeds_1.png",
@@ -18,7 +18,19 @@
     ],
     "icon": "fa-seedling",
     "amazonLink": "https://amzn.to/4i9jhMi",
-    "variants": ["250g", "500g", "1kg"],
+    "variants": ["200g", "500g"],
+    "variantPricing": {
+      "200g": {
+        "price": 181,
+        "originalPrice": 248,
+        "discount": 27
+      },
+      "500g": {
+        "price": 351,
+        "originalPrice": 501,
+        "discount": 30
+      }
+    },
     "benefits": [
       "Highest plant-based source of omega-3 fatty acids",
       "Rich in dietary fiber for digestive health",

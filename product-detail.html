@@ -241,6 +241,9 @@
                     return;
                 }
 
+                // Store product globally for variant switching
+                currentProduct = product;
+
                 displayProductDetail(product);
                 displayRelatedProducts(products, product.category, productId);
 
@@ -332,9 +335,9 @@
 
                     <div class="product-variants">
                         <h3>Size</h3>
-                        <div class="variant-options">
-                            ${product.variants ? product.variants.map(variant =>
-                                `<button class="variant-btn">${variant}</button>`
+                        <div class="variant-options" id="variantOptions">
+                            ${product.variants ? product.variants.map((variant, index) =>
+                                `<button class="variant-btn ${index === 0 ? 'active' : ''}" data-variant="${variant}" onclick="selectVariant('${variant}', ${product.id})">${variant}</button>`
                             ).join('') : '<button class="variant-btn active">500g</button>'}
                         </div>
                     </div>
@@ -402,6 +405,9 @@
             }).join('');
         }
 
+        // Store current product globally for variant switching
+        let currentProduct = null;
+
         // Function to change main product image
         function changeMainImage(imageSrc, thumbnailElement) {
             const mainImage = document.getElementById('mainProductImage');
@@ -414,6 +420,33 @@
                 if (thumbnailElement) {
                     thumbnailElement.classList.add('active');
                 }
+            }
+        }
+
+        // Function to handle variant selection
+        function selectVariant(variantSize, productId) {
+            if (!currentProduct) return;
+
+            // Update active button
+            const variantButtons = document.querySelectorAll('.variant-btn');
+            variantButtons.forEach(btn => {
+                if (btn.dataset.variant === variantSize) {
+                    btn.classList.add('active');
+                } else {
+                    btn.classList.remove('active');
+                }
+            });
+
+            // Update price if variantPricing exists
+            if (currentProduct.variantPricing && currentProduct.variantPricing[variantSize]) {
+                const pricing = currentProduct.variantPricing[variantSize];
+                const currentPriceEl = document.querySelector('.product-price .current-price');
+                const originalPriceEl = document.querySelector('.product-price .original-price');
+                const discountBadgeEl = document.querySelector('.product-price .discount-badge');
+
+                if (currentPriceEl) currentPriceEl.textContent = `₹${pricing.price}`;
+                if (originalPriceEl) originalPriceEl.textContent = `₹${pricing.originalPrice}`;
+                if (discountBadgeEl) discountBadgeEl.textContent = `${pricing.discount}% OFF`;
             }
         }
     </script>
