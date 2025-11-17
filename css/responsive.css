@@ -177,6 +177,11 @@
         padding: var(--spacing-sm);
     }
 
+    .logo-img {
+        height: 50px;
+        max-width: 180px;
+    }
+
     .logo h1 {
         font-size: 1.25rem;
     }
@@ -405,6 +410,11 @@
     }
 
     /* Logo */
+    .logo-img {
+        height: 45px;
+        max-width: 160px;
+    }
+
     .logo h1 {
         font-size: 1.1rem;
     }

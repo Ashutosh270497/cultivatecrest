@@ -129,6 +129,23 @@ ul {
     margin: 0 auto;
 }
 
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo-img {
+    height: 60px;
+    width: auto;
+    max-width: 200px;
+    object-fit: contain;
+    transition: transform var(--transition-fast);
+}
+
+.logo-img:hover {
+    transform: scale(1.05);
+}
+
 .logo h1 {
     font-size: 1.5rem;
     color: var(--primary-color);
@@ -419,6 +436,14 @@ ul {
 .footer-col h3,
 .footer-col h4 {
     color: var(--bg-white);
+    margin-bottom: var(--spacing-md);
+}
+
+.footer-logo {
+    height: 50px;
+    width: auto;
+    max-width: 180px;
+    object-fit: contain;
     margin-bottom: var(--spacing-md);
 }
 
