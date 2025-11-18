@@ -12,6 +12,13 @@ document.addEventListener('DOMContentLoaded', function() {
     if (productGrid) {
         loadProducts();
     }
+
+    // Add event listener for variant changes
+    document.addEventListener('change', function(e) {
+        if (e.target.classList.contains('variant-select')) {
+            handleVariantChange(e.target);
+        }
+    });
 });
 
 /**
@@ -154,6 +161,43 @@ function createProductCard(product) {
             </div>
         </div>
     `;
+}
+
+/**
+ * Handle variant change
+ */
+function handleVariantChange(selectElement) {
+    const productId = selectElement.getAttribute('data-product-id');
+    const selectedVariant = selectElement.value;
+    const product = getProductById(productId);
+
+    if (product && product.variantPricing && product.variantPricing[selectedVariant]) {
+        const pricing = product.variantPricing[selectedVariant];
+        const productCard = selectElement.closest('.product-card');
+
+        if (productCard) {
+            // Update current price
+            const currentPriceEl = productCard.querySelector('.current-price');
+            if (currentPriceEl) {
+                currentPriceEl.textContent = `₹ ${pricing.price}`;
+            }
+
+            // Update original price
+            const originalPriceEl = productCard.querySelector('.original-price');
+            if (originalPriceEl) {
+                originalPriceEl.textContent = `₹ ${pricing.originalPrice}`;
+            } else if (pricing.originalPrice > pricing.price) {
+                // Add original price if it doesn't exist but there's a discount
+                const priceDiv = productCard.querySelector('.product-price');
+                if (priceDiv && !priceDiv.querySelector('.original-price')) {
+                    const originalSpan = document.createElement('span');
+                    originalSpan.className = 'original-price';
+                    originalSpan.textContent = `₹ ${pricing.originalPrice}`;
+                    priceDiv.appendChild(originalSpan);
+                }
+            }
+        }
+    }
 }
 
 /**
