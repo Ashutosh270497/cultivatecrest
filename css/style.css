@@ -917,14 +917,14 @@ ul {
 
 .footer-grid {
     display: grid;
-    grid-template-columns: 1.5fr 1fr 1fr 1fr 1.2fr;
-    gap: calc(var(--spacing-xl) * 1.5);
+    grid-template-columns: 1.5fr 1fr 1fr 1fr 1.3fr;
+    gap: var(--spacing-xl);
     align-items: start;
 }
 
 /* Footer Brand */
 .footer-brand {
-    max-width: 280px;
+    max-width: 260px;
 }
 
 .footer-logo {
@@ -978,6 +978,10 @@ ul {
 }
 
 /* Newsletter Section */
+.footer-newsletter {
+    max-width: 320px;
+}
+
 .footer-newsletter h4 {
     font-size: 0.85rem;
     font-weight: 600;
