@@ -681,7 +681,7 @@ ul {
 .product-grid {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    gap: 28px;
+    gap: 24px;
     max-width: 1280px;
     margin: 0 auto;
     padding: 0 var(--spacing-lg);

@@ -123,11 +123,15 @@
     /* Product Grid */
     .product-grid {
         grid-template-columns: repeat(3, 1fr);
-        gap: 24px;
+        gap: 20px;
     }
 
     .section-header h2 {
         font-size: 2.3rem;
+    }
+
+    .product-card .product-image {
+        height: 200px;
     }
 
     /* Blog Grid */
@@ -300,7 +304,7 @@
     }
 
     .product-card .product-image {
-        height: 240px;
+        height: 180px;
     }
 
     /* Benefits Grid */
@@ -483,7 +487,7 @@
     }
 
     .product-card .product-image {
-        height: 200px;
+        height: 180px;
     }
 
     .product-card .product-name {
@@ -491,7 +495,11 @@
     }
 
     .product-card .current-price {
-        font-size: 1.25rem;
+        font-size: 1.2rem;
+    }
+
+    .product-card .product-details {
+        padding: 16px;
     }
 }
 
