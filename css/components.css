@@ -132,30 +132,106 @@
 }
 
 .product-card .product-name {
-    font-size: 1.1rem;
-    margin-bottom: var(--spacing-sm);
+    font-size: 1.05rem;
+    margin-bottom: var(--spacing-xs);
     color: var(--text-dark);
+    font-weight: 500;
+    line-height: 1.4;
+}
+
+/* Star Ratings */
+.product-card .product-rating {
+    margin-bottom: var(--spacing-sm);
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-xs);
+}
+
+.product-card .stars {
+    color: var(--warm-gold);
+    font-size: 0.9rem;
+}
+
+.product-card .stars i {
+    margin-right: 1px;
+}
+
+.product-card .rating-text {
+    font-size: 0.85rem;
+    color: var(--text-muted);
 }
 
 .product-card .product-price {
     margin-bottom: var(--spacing-md);
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-sm);
 }
 
 .product-card .current-price {
-    font-size: 1.5rem;
+    font-size: 1.35rem;
     font-weight: 700;
-    color: var(--primary-color);
-    margin-right: var(--spacing-sm);
+    color: var(--text-dark);
 }
 
 .product-card .original-price {
     font-size: 1rem;
-    color: var(--text-light);
+    color: var(--text-muted);
     text-decoration: line-through;
 }
 
-.product-card .btn {
-    width: 100%;
+/* Product Actions */
+.product-card .product-actions {
+    display: flex;
+    gap: var(--spacing-sm);
+    align-items: center;
+}
+
+/* Variant Selector */
+.variant-select {
+    flex: 0 0 auto;
+    padding: var(--spacing-sm) var(--spacing-md);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-sm);
+    background: var(--bg-white);
+    font-size: 0.95rem;
+    color: var(--text-dark);
+    cursor: pointer;
+    transition: all var(--transition-base);
+    min-width: 100px;
+}
+
+.variant-select:hover {
+    border-color: var(--primary-color);
+}
+
+.variant-select:focus {
+    outline: none;
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 3px rgba(46, 92, 62, 0.1);
+}
+
+/* Add to Cart Button */
+.btn-add-cart {
+    flex: 1;
+    background: var(--primary-color);
+    color: var(--bg-white);
+    padding: var(--spacing-sm) var(--spacing-md);
+    border-radius: var(--radius-sm);
+    font-size: 0.9rem;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    text-align: center;
+    transition: all var(--transition-base);
+    text-decoration: none;
+    border: none;
+    cursor: pointer;
+}
+
+.btn-add-cart:hover {
+    background: var(--primary-dark);
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-md);
 }
 
 /* Blog Card */

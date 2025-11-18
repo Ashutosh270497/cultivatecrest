@@ -104,23 +104,52 @@ function createProductCard(product) {
         `;
     }
 
+    // Generate star rating HTML
+    const rating = product.rating || 4.5;
+    const reviews = product.reviews || 0;
+    const fullStars = Math.floor(rating);
+    const hasHalfStar = rating % 1 >= 0.5;
+
+    let starsHTML = '';
+    for (let i = 0; i < fullStars; i++) {
+        starsHTML += '<i class="fas fa-star"></i>';
+    }
+    if (hasHalfStar) {
+        starsHTML += '<i class="fas fa-star-half-alt"></i>';
+    }
+    const emptyStars = 5 - fullStars - (hasHalfStar ? 1 : 0);
+    for (let i = 0; i < emptyStars; i++) {
+        starsHTML += '<i class="far fa-star"></i>';
+    }
+
+    // Get first variant for selector
+    const firstVariant = product.variants ? product.variants[0] : '500g';
+
     return `
         <div class="product-card" data-product-id="${product.id}">
             <div class="product-image">
                 ${imageSliderHTML}
-                ${discount > 0 ? `<span class="discount-badge">${discount}% OFF</span>` : ''}
             </div>
             <div class="product-details">
                 <h3 class="product-name">${product.name}</h3>
+                <div class="product-rating">
+                    <span class="stars">${starsHTML}</span>
+                    <span class="rating-text">(${rating}/5 Star${reviews > 0 ? ` · ${reviews} Reviews` : ''})</span>
+                </div>
                 <div class="product-price">
-                    <span class="current-price">₹${product.price}</span>
+                    <span class="current-price">₹ ${product.price}</span>
                     ${product.originalPrice > product.price ?
-                        `<span class="original-price">₹${product.originalPrice}</span>` :
+                        `<span class="original-price">₹ ${product.originalPrice}</span>` :
                         ''
                     }
                 </div>
                 <div class="product-actions">
-                    <a href="product-detail.html?id=${product.id}" class="btn btn-secondary">View Details</a>
+                    <select class="variant-select" data-product-id="${product.id}">
+                        ${product.variants ? product.variants.map(variant =>
+                            `<option value="${variant}">${variant}</option>`
+                        ).join('') : '<option value="500g">500g</option>'}
+                    </select>
+                    <a href="${product.amazonLink}" target="_blank" class="btn btn-add-cart">ADD TO CART</a>
                 </div>
             </div>
         </div>

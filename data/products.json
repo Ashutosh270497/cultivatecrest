@@ -18,6 +18,8 @@
     ],
     "icon": "fa-seedling",
     "amazonLink": "https://amzn.to/4i9jhMi",
+    "rating": 4.8,
+    "reviews": 342,
     "variants": ["200g", "500g"],
     "variantPricing": {
       "200g": {
@@ -59,6 +61,8 @@
     ],
     "icon": "fa-spa",
     "amazonLink": "https://amzn.to/446R8PX",
+    "rating": 4.9,
+    "reviews": 289,
     "variants": ["200g", "500g"],
     "variantPricing": {
       "200g": {
@@ -100,6 +104,8 @@
     ],
     "icon": "fa-leaf",
     "amazonLink": "https://amzn.to/4r2TSaR",
+    "rating": 4.7,
+    "reviews": 267,
     "variants": ["200g", "500g"],
     "variantPricing": {
       "200g": {
@@ -146,6 +152,8 @@
     ],
     "icon": "fa-sun",
     "amazonLink": "https://amzn.to/4pfhuHQ",
+    "rating": 4.6,
+    "reviews": 198,
     "variants": ["200g", "500g"],
     "variantPricing": {
       "200g": {
