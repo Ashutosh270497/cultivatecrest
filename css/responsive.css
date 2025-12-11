@@ -127,11 +127,7 @@
     }
 
     .section-header h2 {
-        font-size: 2.3rem;
-    }
-
-    .product-card .product-image {
-        height: 160px;
+        font-size: var(--text-3xl);
     }
 
     /* Blog Grid */
@@ -301,10 +297,6 @@
         grid-template-columns: 1fr;
         gap: 20px;
         padding: 0 var(--spacing-sm);
-    }
-
-    .product-card .product-image {
-        height: 150px;
     }
 
     /* Benefits Grid */
@@ -511,19 +503,15 @@
     }
 
     .section-header h2 {
-        font-size: 1.8rem;
-    }
-
-    .product-card .product-image {
-        height: 150px;
+        font-size: var(--text-2xl);
     }
 
     .product-card .product-name {
-        font-size: 0.95rem;
+        font-size: var(--text-base);
     }
 
     .product-card .current-price {
-        font-size: 1.2rem;
+        font-size: var(--text-lg);
     }
 
     .product-card .product-details {
@@ -566,12 +554,8 @@
     }
 
     /* Product Card */
-    .product-card .product-image {
-        height: 200px;
-    }
-
     .product-card .current-price {
-        font-size: 1.25rem;
+        font-size: var(--text-xl);
     }
 
     /* Blog Card */
