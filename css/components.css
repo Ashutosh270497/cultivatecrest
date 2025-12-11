@@ -64,16 +64,16 @@
 /* Slider Indicators */
 .slider-indicators {
     position: absolute;
-    bottom: 10px;
+    bottom: var(--spacing-xs);
     left: 50%;
     transform: translateX(-50%);
     display: flex;
-    gap: 6px;
+    gap: var(--spacing-xs);
     z-index: 10;
-    padding: 5px 10px;
+    padding: var(--spacing-xs) var(--spacing-sm);
     background: rgba(0, 0, 0, 0.3);
     backdrop-filter: blur(5px);
-    border-radius: 20px;
+    border-radius: var(--radius-pill);
 }
 
 .slider-indicators .indicator {
@@ -87,7 +87,7 @@
 
 .slider-indicators .indicator.active {
     width: 20px;
-    border-radius: 10px;
+    border-radius: var(--radius-sm);
     background: var(--bg-white);
 }
 
@@ -106,18 +106,22 @@
     right: var(--spacing-sm);
     background: var(--warm-gradient);
     color: var(--text-dark);
-    padding: var(--spacing-xs) var(--spacing-md);
+    padding: var(--spacing-xs) var(--spacing-sm);
     border-radius: var(--radius-pill);
-    font-size: 0.8rem;
+    font-size: var(--text-xs);
     font-weight: 700;
     letter-spacing: 0.5px;
-    box-shadow: var(--shadow-warm);
-    animation: pulse 2s ease-in-out infinite;
+    box-shadow: var(--shadow-sm);
+    transition: transform var(--transition-base);
     z-index: 10;
 }
 
+.product-card:hover .discount-badge {
+    transform: scale(1.05);
+}
+
 .product-card .product-details {
-    padding: 16px;
+    padding: var(--spacing-sm);
     flex: 1;
     display: flex;
     flex-direction: column;
@@ -127,7 +131,7 @@
 
 .product-card .product-name {
     font-size: var(--text-lg);
-    margin-bottom: 8px;
+    margin-bottom: var(--spacing-xs);
     color: var(--text-dark);
     font-weight: 600;
     line-height: 1.3;
@@ -142,10 +146,10 @@
 
 /* Star Ratings */
 .product-card .product-rating {
-    margin-bottom: 8px;
+    margin-bottom: var(--spacing-xs);
     display: flex;
     align-items: center;
-    gap: 5px;
+    gap: var(--spacing-xs);
 }
 
 .product-card .stars {
@@ -170,10 +174,10 @@
 }
 
 .product-card .product-price {
-    margin-bottom: 10px;
+    margin-bottom: var(--spacing-xs);
     display: flex;
     align-items: baseline;
-    gap: 6px;
+    gap: var(--spacing-xs);
     flex-wrap: wrap;
 }
 

@@ -463,8 +463,8 @@ ul {
     background: rgba(255, 255, 255, 0.2);
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
-    border-radius: 50px;
-    font-size: 0.95rem;
+    border-radius: var(--radius-pill);
+    font-size: var(--text-sm);
     font-weight: 600;
     margin-bottom: var(--spacing-md);
     border: 1px solid rgba(255, 255, 255, 0.3);
@@ -559,7 +559,7 @@ ul {
 
 .slider-dots .dot.active {
     width: 40px;
-    border-radius: 10px;
+    border-radius: var(--radius-sm);
     background: var(--bg-white);
     border-color: rgba(255, 255, 255, 0.5);
 }
@@ -915,8 +915,8 @@ ul {
     flex: 1;
     padding: var(--spacing-sm) var(--spacing-md);
     border: none;
-    border-radius: 40px;
-    font-size: 1rem;
+    border-radius: var(--radius-xl);
+    font-size: var(--text-base);
 }
 
 .newsletter-form button {
@@ -1174,20 +1174,34 @@ ul {
 
 /* Image Placeholder */
 .image-placeholder {
-    background: linear-gradient(135deg, var(--bg-light) 0%, #E8E8E8 100%);
+    background: var(--natural-gradient);
     display: flex;
     align-items: center;
     justify-content: center;
-    color: var(--text-light);
+    color: var(--primary-light);
     border-radius: var(--radius-lg);
+    position: relative;
+    overflow: hidden;
+}
+
+.image-placeholder::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: radial-gradient(circle at 30% 30%, rgba(46, 92, 62, 0.05) 0%, transparent 50%);
+    pointer-events: none;
 }
 
 .image-placeholder i {
-    font-size: 4rem;
+    font-size: var(--text-5xl);
+    opacity: 0.6;
 }
 
 .product-image-large i {
-    font-size: 8rem;
+    font-size: var(--text-6xl);
 }
 
 /* Utility Classes */
