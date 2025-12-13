@@ -9,7 +9,12 @@
       "Bash(git remote add:*)",
       "Bash(git push:*)",
       "Bash(git pull:*)",
-      "Bash(git stash:*)"
+      "Bash(git stash:*)",
+      "Bash(for file in about.html contact.html blog.html product-detail.html)",
+      "Bash(do sed:*)",
+      "Bash(done)",
+      "Bash(git restore:*)",
+      "Bash(tree:*)"
     ],
     "deny": [],
     "ask": []

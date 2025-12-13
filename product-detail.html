@@ -18,11 +18,15 @@
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/components.css">
     <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="css/premium-effects.css">
 
     <!-- Font Awesome for Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
+    <!-- Skip to Content Link - Accessibility -->
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+
     <!-- Header -->
     <header class="header">
         <div class="header-container">
@@ -93,6 +97,7 @@
     </header>
 
     <!-- Breadcrumb -->
+    <main id="main-content">
     <div class="breadcrumb">
         <div class="container">
             <a href="index.html">Home</a>
@@ -109,6 +114,36 @@
             <div class="product-detail-grid" id="productDetailContainer">
                 <!-- Content will be loaded dynamically by JavaScript -->
                 <div class="loading">Loading product details...</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Product Video Section -->
+    <section class="product-video-section" id="productVideoSection" style="display: none;">
+        <div class="container">
+            <div class="section-header">
+                <h2>See It In Action</h2>
+                <p>Watch how our premium seeds can transform your meals</p>
+            </div>
+            <div class="product-video-container">
+                <video id="productVideo" controls playsinline poster="">
+                    <source src="" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+        </div>
+    </section>
+
+    <!-- Product A+ Content Gallery -->
+    <section class="product-aplus-section" id="productAplusSection" style="display: none;">
+        <div class="container">
+            <div class="aplus-gallery">
+                <div class="aplus-item">
+                    <img src="images/Banners/A+_8.png" alt="Nature's Power Duo for Everyday Wellness" loading="lazy">
+                </div>
+                <div class="aplus-item">
+                    <img src="images/Banners/A+_2.png" alt="Versatile Recipe Ideas" loading="lazy">
+                </div>
             </div>
         </div>
     </section>
@@ -151,9 +186,9 @@
             </div>
         </div>
     </section>
+    </main>
 
     <!-- Footer -->
-
     <footer class="footer">
         <div class="container">
             <div class="footer-content">
@@ -220,11 +255,12 @@
             <div class="footer-bottom">
                 <p class="footer-copyright">&copy; 2025 CultivateCrest. All Rights Reserved.</p>
                 <div class="payment-methods">
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/5/5e/Visa_Inc._logo.svg" alt="Visa" class="payment-icon">
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/2/2a/Mastercard-logo.svg" alt="Mastercard" class="payment-icon">
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/b/b5/PayPal.svg" alt="PayPal" class="payment-icon">
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/f/fa/American_Express_logo_%282018%29.svg" alt="American Express" class="payment-icon">
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/archive/f/f2/20200423115408%21Google_Pay_Logo.svg" alt="Google Pay" class="payment-icon">
+                    <i class="fab fa-cc-visa payment-icon-fa" title="Visa"></i>
+                    <i class="fab fa-cc-mastercard payment-icon-fa" title="Mastercard"></i>
+                    <i class="fab fa-cc-paypal payment-icon-fa" title="PayPal"></i>
+                    <i class="fab fa-cc-amex payment-icon-fa" title="American Express"></i>
+                    <i class="fab fa-google-pay payment-icon-fa" title="Google Pay"></i>
+                    <i class="fab fa-amazon-pay payment-icon-fa" title="Amazon Pay"></i>
                 </div>
             </div>
         </div>
@@ -235,6 +271,7 @@
     <script src="js/search.js"></script>
     <script src="js/mobile-menu.js"></script>
     <script src="js/animations.js"></script>
+    <script src="js/premium-effects.js"></script>
 
     <!-- Product Detail Script -->
     <script>
@@ -277,6 +314,10 @@
                 // Show sections
                 document.getElementById('productFeaturesSection').style.display = 'block';
                 document.getElementById('relatedProductsSection').style.display = 'block';
+                document.getElementById('productAplusSection').style.display = 'block';
+
+                // Load product video
+                loadProductVideo(product);
             } catch (error) {
                 console.error('Error loading product:', error);
                 document.getElementById('productDetailContainer').innerHTML =
@@ -392,9 +433,10 @@
         }
 
         function displayRelatedProducts(allProducts, category, currentProductId) {
+            // Get all active products except the current one
             const relatedProducts = allProducts
-                .filter(p => p.category === category && p.id != currentProductId)
-                .slice(0, 4);
+                .filter(p => p.active !== false && p.id != currentProductId)
+                .slice(0, 3);
 
             if (relatedProducts.length === 0) {
                 document.getElementById('relatedProductsSection').style.display = 'none';
@@ -404,26 +446,66 @@
             const container = document.getElementById('relatedProducts');
             container.innerHTML = relatedProducts.map(product => {
                 const discount = Math.round(((product.originalPrice - product.price) / product.originalPrice) * 100);
+                const productImage = product.image || (product.images && product.images[0]);
+                const hasImage = productImage && productImage.trim() !== '';
+
+                // Generate star rating
+                const rating = product.rating || 4.5;
+                const fullStars = Math.floor(rating);
+                const hasHalfStar = rating % 1 >= 0.5;
+                let starsHTML = '';
+                for (let i = 0; i < fullStars; i++) {
+                    starsHTML += '<i class="fas fa-star"></i>';
+                }
+                if (hasHalfStar) {
+                    starsHTML += '<i class="fas fa-star-half-alt"></i>';
+                }
+                const emptyStars = 5 - fullStars - (hasHalfStar ? 1 : 0);
+                for (let i = 0; i < emptyStars; i++) {
+                    starsHTML += '<i class="far fa-star"></i>';
+                }
+
                 return `
-                    <div class="product-card">
-                        <div class="product-image">
-                            <div class="image-placeholder">
-                                <i class="fas ${product.icon}"></i>
+                    <div class="product-card" data-product-id="${product.id}">
+                        <a href="product-detail.html?id=${product.id}" class="product-link">
+                            <div class="product-image">
+                                ${hasImage ? `
+                                    <img src="${productImage}"
+                                         alt="${product.name}"
+                                         loading="lazy"
+                                         onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                                    <div class="image-placeholder" style="display:none;">
+                                        <i class="fas ${product.icon}"></i>
+                                    </div>
+                                ` : `
+                                    <div class="image-placeholder">
+                                        <i class="fas ${product.icon}"></i>
+                                    </div>
+                                `}
+                                ${discount > 0 ? `<span class="discount-badge">${discount}% OFF</span>` : ''}
                             </div>
-                            ${discount > 0 ? `<span class="discount-badge">${discount}% OFF</span>` : ''}
-                        </div>
-                        <div class="product-details">
-                            <h3 class="product-name">${product.name}</h3>
-                            <div class="product-price">
-                                <span class="current-price">₹${product.price}</span>
-                                ${product.originalPrice > product.price ?
-                                    `<span class="original-price">₹${product.originalPrice}</span>` : ''}
+                            <div class="product-details">
+                                <h3 class="product-name">${product.name}</h3>
+                                <div class="product-rating">
+                                    <span class="stars">${starsHTML}</span>
+                                    <span class="rating-text">(${rating}/5)</span>
+                                </div>
+                                <div class="product-price">
+                                    <span class="current-price">₹${product.price}</span>
+                                    ${product.originalPrice > product.price ?
+                                        `<span class="original-price">₹${product.originalPrice}</span>` : ''}
+                                </div>
                             </div>
-                            <a href="product-detail.html?id=${product.id}" class="btn btn-secondary">View Details</a>
+                        </a>
+                        <div class="product-actions" style="padding: 0 15px 15px;">
+                            <a href="product-detail.html?id=${product.id}" class="btn btn-secondary" style="width: 100%;">View Details</a>
                         </div>
                     </div>
                 `;
             }).join('');
+
+            // Dispatch event to reinitialize premium effects on new cards
+            window.dispatchEvent(new Event('productsUpdated'));
         }
 
         // Store current product globally for variant switching
@@ -468,6 +550,57 @@
                 if (currentPriceEl) currentPriceEl.textContent = `₹${pricing.price}`;
                 if (originalPriceEl) originalPriceEl.textContent = `₹${pricing.originalPrice}`;
                 if (discountBadgeEl) discountBadgeEl.textContent = `${pricing.discount}% OFF`;
+            }
+        }
+
+        // Function to load product video based on product name
+        function loadProductVideo(product) {
+            const videoSection = document.getElementById('productVideoSection');
+            const videoElement = document.getElementById('productVideo');
+            const videoSource = videoElement.querySelector('source');
+
+            // Map product names to video files
+            const videoMap = {
+                'chia': {
+                    '200g': 'images/Banners/Chia_200g.mp4',
+                    '500g': 'images/Banners/chia_500g.mp4'
+                },
+                'flax': {
+                    '200g': 'images/Banners/flaxseed_200g.mp4',
+                    '500g': 'images/Banners/Flaxseed_500g.mp4'
+                },
+                'pumpkin': {
+                    '200g': 'images/Banners/Pumpkin_200g.mp4',
+                    '500g': 'images/Banners/pumpkin_500.mp4'
+                },
+                'sunflower': {
+                    '200g': 'images/Banners/Sunflower_200g.mp4',
+                    '500g': 'images/Banners/Sunflower_500g.mp4'
+                }
+            };
+
+            // Determine which product video to load
+            const productNameLower = product.name.toLowerCase();
+            let videoPath = null;
+
+            for (const [key, videos] of Object.entries(videoMap)) {
+                if (productNameLower.includes(key)) {
+                    // Default to 200g video, or first available
+                    videoPath = videos['200g'] || videos['500g'];
+                    break;
+                }
+            }
+
+            // If we found a video, show the section and load it
+            if (videoPath) {
+                videoSource.src = videoPath;
+                videoElement.load();
+                videoSection.style.display = 'block';
+            } else {
+                // Use A+ content video as fallback
+                videoSource.src = 'images/Banners/A+_Content_Video.mp4';
+                videoElement.load();
+                videoSection.style.display = 'block';
             }
         }
     </script>

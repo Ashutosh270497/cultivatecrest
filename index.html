@@ -19,11 +19,15 @@
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/components.css">
     <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="css/premium-effects.css">
 
     <!-- Font Awesome for Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
+    <!-- Skip to Content Link - Accessibility -->
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+
     <!-- Header -->
     <header class="header">
         <div class="header-container">
@@ -93,7 +97,22 @@
         </div>
     </header>
 
+    <!-- Announcement Marquee Banner -->
+    <div class="marquee">
+        <div class="marquee-content">
+            <span><i class="fas fa-truck"></i> Free Shipping on Orders Above Rs.499</span>
+            <span><i class="fas fa-star"></i> 100% Organic & Lab Tested</span>
+            <span><i class="fas fa-gift"></i> Use Code HEALTH20 for 20% Off</span>
+            <span><i class="fas fa-shield-alt"></i> FSSAI Certified Products</span>
+            <span><i class="fas fa-truck"></i> Free Shipping on Orders Above Rs.499</span>
+            <span><i class="fas fa-star"></i> 100% Organic & Lab Tested</span>
+            <span><i class="fas fa-gift"></i> Use Code HEALTH20 for 20% Off</span>
+            <span><i class="fas fa-shield-alt"></i> FSSAI Certified Products</span>
+        </div>
+    </div>
+
     <!-- Hero Banner Slider -->
+    <main id="main-content">
     <section class="hero-slider">
         <div class="slider-container">
             <!-- Slide 1: Main CTA -->
@@ -175,6 +194,60 @@
         </div>
     </section>
 
+    <!-- Trust Badges Section -->
+    <section class="trust-badges">
+        <div class="container">
+            <div class="trust-grid">
+                <div class="trust-item reveal">
+                    <div class="trust-icon">
+                        <i class="fas fa-leaf"></i>
+                    </div>
+                    <div class="trust-content">
+                        <h4>100% Organic</h4>
+                        <p>Naturally sourced ingredients</p>
+                    </div>
+                </div>
+                <div class="trust-item reveal">
+                    <div class="trust-icon">
+                        <i class="fas fa-flask"></i>
+                    </div>
+                    <div class="trust-content">
+                        <h4>Lab Tested</h4>
+                        <p>Quality assured products</p>
+                    </div>
+                </div>
+                <div class="trust-item reveal">
+                    <div class="trust-icon">
+                        <i class="fas fa-certificate"></i>
+                    </div>
+                    <div class="trust-content">
+                        <h4>FSSAI Certified</h4>
+                        <p>Government approved</p>
+                    </div>
+                </div>
+                <div class="trust-item reveal">
+                    <div class="trust-icon">
+                        <i class="fas fa-shipping-fast"></i>
+                    </div>
+                    <div class="trust-content">
+                        <h4>Fast Delivery</h4>
+                        <p>Pan India shipping</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Lifestyle Banner Section -->
+    <section class="lifestyle-banner">
+        <div class="lifestyle-banner-content">
+            <img src="images/Banners/A+_3.png" alt="The Perfect Pair for Your Mindful Lifestyle" class="lifestyle-banner-img">
+            <div class="lifestyle-banner-overlay">
+                <a href="#products" class="btn btn-primary btn-large">Shop Now</a>
+            </div>
+        </div>
+    </section>
+
     <!-- Featured Products Section -->
     <section class="products-section" id="products">
         <div class="container">
@@ -195,31 +268,207 @@
         </div>
     </section>
 
-    <!-- Benefits Section -->
-    <section class="benefits-section">
+    <!-- Wellness Power Duo Banner -->
+    <section class="wellness-banner">
+        <img src="images/Banners/A+_8.png" alt="Nature's Power Duo for Everyday Wellness" class="wellness-banner-img">
+    </section>
+
+    <!-- Recipe Ideas Gallery -->
+    <section class="recipe-gallery-section">
         <div class="container">
-            <h2>Why Choose CultivateCrest?</h2>
-            <div class="benefits-grid">
-                <div class="benefit-card">
-                    <i class="fas fa-leaf"></i>
+            <div class="section-header">
+                <h2>Versatile & Delicious</h2>
+                <p>Discover endless ways to enjoy our premium seeds</p>
+            </div>
+            <div class="recipe-gallery">
+                <div class="recipe-gallery-item large">
+                    <img src="images/Banners/A+_2.png" alt="Recipe Ideas - Smoothies, Puddings, Salads & More" loading="lazy">
+                </div>
+                <div class="recipe-gallery-item">
+                    <img src="images/Banners/A+_9.png" alt="Versatile Use - Multiple Recipe Ideas" loading="lazy">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Product Comparison Section -->
+    <section class="product-comparison-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Choose Your Superfood</h2>
+                <p>Each seed offers unique health benefits</p>
+            </div>
+            <div class="comparison-grid">
+                <div class="comparison-item">
+                    <img src="images/Banners/A+_1.png" alt="Raw Pumpkin Seeds & Chia Seeds" loading="lazy">
+                </div>
+                <div class="comparison-item">
+                    <img src="images/Banners/A+_6.png" alt="Raw Pumpkin Seeds & Sunflower Seeds" loading="lazy">
+                </div>
+                <div class="comparison-item">
+                    <img src="images/Banners/A+_7.png" alt="Sunflower Seeds & Pumpkin Seeds Benefits" loading="lazy">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Counter Section -->
+    <section class="stats-counter-section">
+        <div class="container">
+            <div class="stats-counter-grid">
+                <div class="stat-counter-item reveal">
+                    <div class="stat-counter-icon"><i class="fas fa-users"></i></div>
+                    <div class="stat-counter-number">
+                        <span class="counter" data-target="5000">0</span><span class="suffix">+</span>
+                    </div>
+                    <div class="stat-counter-label">Happy Customers</div>
+                </div>
+                <div class="stat-counter-item reveal">
+                    <div class="stat-counter-icon"><i class="fas fa-box"></i></div>
+                    <div class="stat-counter-number">
+                        <span class="counter" data-target="10000">0</span><span class="suffix">+</span>
+                    </div>
+                    <div class="stat-counter-label">Orders Delivered</div>
+                </div>
+                <div class="stat-counter-item reveal">
+                    <div class="stat-counter-icon"><i class="fas fa-star"></i></div>
+                    <div class="stat-counter-number">
+                        <span class="counter" data-target="4.8">0</span><span class="suffix">/5</span>
+                    </div>
+                    <div class="stat-counter-label">Average Rating</div>
+                </div>
+                <div class="stat-counter-item reveal">
+                    <div class="stat-counter-icon"><i class="fas fa-seedling"></i></div>
+                    <div class="stat-counter-number">
+                        <span class="counter" data-target="100">0</span><span class="suffix">%</span>
+                    </div>
+                    <div class="stat-counter-label">Organic & Natural</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Benefits Section - Modern -->
+    <section class="benefits-section" style="position: relative; overflow: hidden;">
+        <!-- Floating Elements -->
+        <div class="floating-elements">
+            <i class="fas fa-leaf floating-leaf"></i>
+            <i class="fas fa-seedling floating-leaf"></i>
+            <i class="fas fa-spa floating-leaf"></i>
+        </div>
+        <!-- Gradient Blobs -->
+        <div class="gradient-blob blob-1"></div>
+        <div class="gradient-blob blob-2"></div>
+
+        <div class="container" style="position: relative; z-index: 2;">
+            <div class="section-header-enhanced">
+                <span class="section-badge"><i class="fas fa-heart"></i> Why Us</span>
+                <h2>Why Choose CultivateCrest?</h2>
+                <p class="section-subtitle">We're committed to bringing you the finest superfoods, sourced responsibly and packed with care.</p>
+            </div>
+            <div class="benefits-grid-modern">
+                <div class="benefit-card-modern card-shine">
+                    <div class="benefit-icon-wrapper">
+                        <i class="fas fa-leaf"></i>
+                    </div>
                     <h3>100% Natural</h3>
-                    <p>Premium quality superfoods sourced from trusted suppliers</p>
+                    <p>Premium quality superfoods sourced from trusted, certified suppliers</p>
                 </div>
-                <div class="benefit-card">
-                    <i class="fas fa-shield-alt"></i>
-                    <h3>Quality Assured</h3>
-                    <p>Rigorous quality checks to ensure the best products</p>
+                <div class="benefit-card-modern card-shine">
+                    <div class="benefit-icon-wrapper">
+                        <i class="fas fa-flask"></i>
+                    </div>
+                    <h3>Lab Tested</h3>
+                    <p>Every batch tested for purity, quality, and nutritional value</p>
                 </div>
-                <div class="benefit-card">
-                    <i class="fas fa-shipping-fast"></i>
+                <div class="benefit-card-modern card-shine">
+                    <div class="benefit-icon-wrapper">
+                        <i class="fas fa-shipping-fast"></i>
+                    </div>
                     <h3>Fast Delivery</h3>
-                    <p>Quick and reliable delivery through Amazon</p>
+                    <p>Quick and reliable delivery through Amazon Prime</p>
                 </div>
-                <div class="benefit-card">
-                    <i class="fas fa-heart"></i>
-                    <h3>Health First</h3>
-                    <p>Promoting healthier lifestyles with nutritious foods</p>
+                <div class="benefit-card-modern card-shine">
+                    <div class="benefit-icon-wrapper">
+                        <i class="fas fa-award"></i>
+                    </div>
+                    <h3>FSSAI Certified</h3>
+                    <p>Government approved for your complete peace of mind</p>
                 </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials-section">
+        <div class="container">
+            <div class="section-header-enhanced">
+                <span class="section-badge"><i class="fas fa-quote-left"></i> Reviews</span>
+                <h2>What Our Customers Say</h2>
+                <p class="section-subtitle">Don't just take our word for it - hear from our satisfied customers</p>
+            </div>
+            <div class="testimonials-grid">
+                <div class="testimonial-card">
+                    <p class="testimonial-content">The chia seeds are of excellent quality! I've been using them in my smoothies every morning and can feel the difference in my energy levels.</p>
+                    <div class="testimonial-author">
+                        <div class="testimonial-avatar">P</div>
+                        <div class="testimonial-info">
+                            <h4>Priya Sharma</h4>
+                            <p>Verified Buyer</p>
+                        </div>
+                    </div>
+                    <div class="testimonial-rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <p class="testimonial-content">Best pumpkin seeds I've found! Fresh, crunchy, and perfect for snacking. The packaging keeps them fresh for weeks. Highly recommend!</p>
+                    <div class="testimonial-author">
+                        <div class="testimonial-avatar">R</div>
+                        <div class="testimonial-info">
+                            <h4>Rahul Verma</h4>
+                            <p>Verified Buyer</p>
+                        </div>
+                    </div>
+                    <div class="testimonial-rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <p class="testimonial-content">Finally found a brand I can trust for organic seeds. Fast delivery and excellent customer service. Will definitely order again!</p>
+                    <div class="testimonial-author">
+                        <div class="testimonial-avatar">A</div>
+                        <div class="testimonial-info">
+                            <h4>Anita Patel</h4>
+                            <p>Verified Buyer</p>
+                        </div>
+                    </div>
+                    <div class="testimonial-rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Small Seeds Big Benefits Banner -->
+    <section class="lifestyle-banner lifestyle-banner-alt">
+        <div class="lifestyle-banner-content">
+            <img src="images/Banners/A+_11.png" alt="Small Seeds Big Benefits - Packed with nutrients, Gluten free and vegan" class="lifestyle-banner-img">
+            <div class="lifestyle-banner-overlay">
+                <a href="#products" class="btn btn-primary btn-large">Explore Products</a>
             </div>
         </div>
     </section>
@@ -238,6 +487,7 @@
             </div>
         </div>
     </section>
+    </main>
 
     <!-- Footer -->
     <footer class="footer">
@@ -306,11 +556,12 @@
             <div class="footer-bottom">
                 <p class="footer-copyright">&copy; 2025 CultivateCrest. All Rights Reserved.</p>
                 <div class="payment-methods">
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/5/5e/Visa_Inc._logo.svg" alt="Visa" class="payment-icon">
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/2/2a/Mastercard-logo.svg" alt="Mastercard" class="payment-icon">
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/b/b5/PayPal.svg" alt="PayPal" class="payment-icon">
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/f/fa/American_Express_logo_%282018%29.svg" alt="American Express" class="payment-icon">
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/archive/f/f2/20200423115408%21Google_Pay_Logo.svg" alt="Google Pay" class="payment-icon">
+                    <i class="fab fa-cc-visa payment-icon-fa" title="Visa"></i>
+                    <i class="fab fa-cc-mastercard payment-icon-fa" title="Mastercard"></i>
+                    <i class="fab fa-cc-paypal payment-icon-fa" title="PayPal"></i>
+                    <i class="fab fa-cc-amex payment-icon-fa" title="American Express"></i>
+                    <i class="fab fa-google-pay payment-icon-fa" title="Google Pay"></i>
+                    <i class="fab fa-amazon-pay payment-icon-fa" title="Amazon Pay"></i>
                 </div>
             </div>
         </div>
@@ -324,5 +575,6 @@
     <script src="js/search.js"></script>
     <script src="js/mobile-menu.js"></script>
     <script src="js/animations.js"></script>
+    <script src="js/premium-effects.js"></script>
 </body>
 </html>

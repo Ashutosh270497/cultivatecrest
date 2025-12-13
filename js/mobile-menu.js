@@ -1,7 +1,10 @@
 /**
  * CultivateCrest - Mobile Menu
- * Handles responsive mobile navigation drawer
+ * Handles responsive mobile navigation drawer with accessibility
  */
+
+// Track focus trap handler to prevent duplicate listeners
+let focusTrapHandler = null;
 
 document.addEventListener('DOMContentLoaded', function() {
     initMobileMenu();
@@ -18,6 +21,20 @@ function initMobileMenu() {
 
     if (!mobileMenuBtn || !mobileMenuDrawer || !mobileMenuOverlay || !closeMenuBtn) {
         return; // Elements not present
+    }
+
+    // Set initial ARIA attributes
+    mobileMenuBtn.setAttribute('aria-expanded', 'false');
+    mobileMenuBtn.setAttribute('aria-controls', 'mobileMenuDrawer');
+    mobileMenuDrawer.setAttribute('role', 'dialog');
+    mobileMenuDrawer.setAttribute('aria-modal', 'true');
+    mobileMenuDrawer.setAttribute('aria-labelledby', 'mobileMenuTitle');
+    mobileMenuOverlay.setAttribute('aria-hidden', 'true');
+
+    // Add ID to menu title for aria-labelledby
+    const menuTitle = mobileMenuDrawer.querySelector('.mobile-menu-header h2');
+    if (menuTitle) {
+        menuTitle.id = 'mobileMenuTitle';
     }
 
     // Open menu
@@ -76,6 +93,7 @@ function initMobileMenu() {
  * Open mobile menu
  */
 function openMobileMenu() {
+    const mobileMenuBtn = document.getElementById('mobileMenuBtn');
     const mobileMenuDrawer = document.getElementById('mobileMenuDrawer');
     const mobileMenuOverlay = document.getElementById('mobileMenuOverlay');
 
@@ -83,6 +101,11 @@ function openMobileMenu() {
         mobileMenuDrawer.classList.add('active');
         mobileMenuOverlay.classList.add('active');
         document.body.style.overflow = 'hidden';
+
+        // Update ARIA states
+        if (mobileMenuBtn) {
+            mobileMenuBtn.setAttribute('aria-expanded', 'true');
+        }
 
         // Trap focus within menu
         trapFocus(mobileMenuDrawer);
@@ -93,6 +116,7 @@ function openMobileMenu() {
  * Close mobile menu
  */
 function closeMobileMenu() {
+    const mobileMenuBtn = document.getElementById('mobileMenuBtn');
     const mobileMenuDrawer = document.getElementById('mobileMenuDrawer');
     const mobileMenuOverlay = document.getElementById('mobileMenuOverlay');
 
@@ -101,8 +125,15 @@ function closeMobileMenu() {
         mobileMenuOverlay.classList.remove('active');
         document.body.style.overflow = '';
 
+        // Update ARIA states
+        if (mobileMenuBtn) {
+            mobileMenuBtn.setAttribute('aria-expanded', 'false');
+        }
+
+        // Remove focus trap handler
+        releaseFocusTrap(mobileMenuDrawer);
+
         // Return focus to menu button
-        const mobileMenuBtn = document.getElementById('mobileMenuBtn');
         if (mobileMenuBtn) {
             mobileMenuBtn.focus();
         }
@@ -120,13 +151,21 @@ function trapFocus(element) {
     const firstFocusable = focusableElements[0];
     const lastFocusable = focusableElements[focusableElements.length - 1];
 
-    // Focus first element
-    if (firstFocusable) {
+    // Focus the close button first for better UX
+    const closeBtn = element.querySelector('.close-menu-btn');
+    if (closeBtn) {
+        closeBtn.focus();
+    } else if (firstFocusable) {
         firstFocusable.focus();
     }
 
-    // Handle tab key
-    element.addEventListener('keydown', function(e) {
+    // Remove existing handler if present to prevent duplicates
+    if (focusTrapHandler) {
+        element.removeEventListener('keydown', focusTrapHandler);
+    }
+
+    // Create focus trap handler
+    focusTrapHandler = function(e) {
         if (e.key !== 'Tab') return;
 
         if (e.shiftKey) {
@@ -142,7 +181,20 @@ function trapFocus(element) {
                 firstFocusable.focus();
             }
         }
-    });
+    };
+
+    // Add handler
+    element.addEventListener('keydown', focusTrapHandler);
+}
+
+/**
+ * Release focus trap from an element
+ */
+function releaseFocusTrap(element) {
+    if (focusTrapHandler) {
+        element.removeEventListener('keydown', focusTrapHandler);
+        focusTrapHandler = null;
+    }
 }
 
 /**

@@ -4,7 +4,6 @@
 
 /* Mobile Menu Styles */
 .mobile-menu-overlay {
-    display: none;
     position: fixed;
     top: 0;
     left: 0;
@@ -13,29 +12,33 @@
     background-color: rgba(0, 0, 0, 0.5);
     z-index: 1998;
     opacity: 0;
-    transition: opacity var(--transition-base);
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
 }
 
 .mobile-menu-overlay.active {
-    display: block;
     opacity: 1;
+    visibility: visible;
 }
 
 .mobile-menu-drawer {
     position: fixed;
     top: 0;
-    left: -300px;
+    left: 0;
     width: 300px;
     height: 100%;
     background-color: var(--bg-white);
     z-index: 1999;
-    transition: left var(--transition-base);
     box-shadow: var(--shadow-lg);
     overflow-y: auto;
+    transform: translateX(-100%);
+    transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    visibility: hidden;
 }
 
 .mobile-menu-drawer.active {
-    left: 0;
+    transform: translateX(0);
+    visibility: visible;
 }
 
 .mobile-menu-header {
@@ -93,23 +96,25 @@
         display: block;
     }
 
-    /* Hero Slider */
+    /* Hero Slider - Use viewport height */
     .hero-slider {
-        height: 500px;
+        height: 70vh;
+        min-height: 450px;
+        max-height: 600px;
     }
 
     .slide-title {
-        font-size: 2.5rem;
+        font-size: var(--text-4xl);
     }
 
     .slide-subtitle {
-        font-size: 1.1rem;
+        font-size: var(--text-lg);
     }
 
     .slider-nav {
         width: 45px;
         height: 45px;
-        font-size: 1.1rem;
+        font-size: var(--text-lg);
     }
 
     .slider-prev {
@@ -120,10 +125,10 @@
         right: var(--spacing-md);
     }
 
-    /* Product Grid */
+    /* Product Grid - 3 columns on tablet */
     .product-grid {
         grid-template-columns: repeat(3, 1fr);
-        gap: 20px;
+        gap: var(--spacing-md);
     }
 
     .section-header h2 {
@@ -182,12 +187,12 @@
     }
 }
 
-/* Mobile Styles (max-width: 750px) */
-@media (max-width: 750px) {
-    /* Typography */
-    h1 { font-size: 2rem; }
-    h2 { font-size: 1.75rem; }
-    h3 { font-size: 1.25rem; }
+/* Mobile Styles (max-width: 768px) */
+@media (max-width: 768px) {
+    /* Typography - Use CSS variables */
+    h1 { font-size: var(--text-3xl); }
+    h2 { font-size: var(--text-2xl); }
+    h3 { font-size: var(--text-xl); }
 
     /* Spacing */
     .container {
@@ -200,12 +205,12 @@
     }
 
     .logo-img {
-        height: 50px;
-        max-width: 180px;
+        height: 45px;
+        max-width: 160px;
     }
 
     .logo h1 {
-        font-size: 1.25rem;
+        font-size: var(--text-xl);
     }
 
     .search-box {
@@ -214,21 +219,23 @@
         min-width: 280px;
     }
 
-    /* Hero Slider */
+    /* Hero Slider - Viewport height */
     .hero-slider {
-        height: 450px;
+        height: 60vh;
+        min-height: 400px;
+        max-height: 500px;
     }
 
     .slide-title {
-        font-size: 2rem;
+        font-size: var(--text-3xl);
     }
 
     .slide-subtitle {
-        font-size: 1rem;
+        font-size: var(--text-base);
     }
 
     .slide-badge {
-        font-size: 0.85rem;
+        font-size: var(--text-xs);
         padding: var(--spacing-xs) var(--spacing-sm);
     }
 
@@ -239,13 +246,13 @@
 
     .slide-cta .btn {
         width: 100%;
-        max-width: 300px;
+        max-width: 280px;
     }
 
     .slider-nav {
         width: 40px;
         height: 40px;
-        font-size: 1rem;
+        font-size: var(--text-base);
     }
 
     .slider-prev {
@@ -266,7 +273,7 @@
     }
 
     .slider-dots .dot.active {
-        width: 30px;
+        width: 28px;
     }
 
     /* Sections */
@@ -289,13 +296,13 @@
     }
 
     .section-header h2 {
-        font-size: 2rem;
+        font-size: var(--text-2xl);
     }
 
-    /* Product Grid */
+    /* Product Grid - 2 columns on mobile */
     .product-grid {
-        grid-template-columns: 1fr;
-        gap: 20px;
+        grid-template-columns: repeat(2, 1fr);
+        gap: var(--spacing-sm);
         padding: 0 var(--spacing-sm);
     }
 
@@ -519,77 +526,131 @@
     }
 }
 
+/* Small Mobile (max-width: 480px) */
 @media (max-width: 480px) {
-    /* Typography */
-    h1 { font-size: 1.75rem; }
-    h2 { font-size: 1.5rem; }
-    h3 { font-size: 1.1rem; }
+    /* Typography - Use CSS variables */
+    h1 { font-size: var(--text-2xl); }
+    h2 { font-size: var(--text-xl); }
+    h3 { font-size: var(--text-lg); }
 
-    /* Hero Slider */
+    /* Hero Slider - Viewport height */
     .hero-slider {
-        height: 400px;
+        height: 55vh;
+        min-height: 350px;
+        max-height: 450px;
     }
 
     .slide-title {
-        font-size: 1.75rem;
+        font-size: var(--text-2xl);
     }
 
     .slide-subtitle {
-        font-size: 0.95rem;
+        font-size: var(--text-sm);
+    }
+
+    .slide-badge {
+        font-size: var(--text-xs);
+        padding: 4px var(--spacing-xs);
     }
 
     /* Logo */
     .logo-img {
-        height: 45px;
-        max-width: 160px;
+        height: 40px;
+        max-width: 140px;
     }
 
     .logo h1 {
-        font-size: 1.1rem;
+        font-size: var(--text-base);
     }
 
     /* Search Box */
     .search-box {
-        min-width: 250px;
+        min-width: 100%;
+        left: 50%;
+        transform: translateX(-50%);
     }
 
-    /* Product Card */
+    /* Product Grid - Single column on small mobile */
+    .product-grid {
+        grid-template-columns: 1fr;
+        gap: var(--spacing-md);
+    }
+
     .product-card .current-price {
-        font-size: var(--text-xl);
+        font-size: var(--text-lg);
     }
 
     /* Blog Card */
     .blog-card .blog-image {
-        height: 150px;
+        height: 160px;
     }
 
     .blog-card h2 {
-        font-size: 1.1rem;
+        font-size: var(--text-lg);
     }
 
     /* Buttons */
     .btn {
         padding: var(--spacing-sm) var(--spacing-md);
-        font-size: 0.95rem;
+        font-size: var(--text-sm);
     }
 
-    /* Footer */
+    .btn-view-all {
+        width: 100%;
+        text-align: center;
+    }
+
+    /* Footer - Single column */
+    .footer-content {
+        padding: 0 var(--spacing-sm) var(--spacing-lg);
+    }
+
     .footer-grid {
         grid-template-columns: 1fr;
+        gap: var(--spacing-lg);
+        text-align: center;
     }
 
     .footer-brand,
+    .footer-col,
     .footer-newsletter {
         grid-column: 1;
     }
 
-    .footer-copyright,
+    .footer-brand {
+        max-width: 100%;
+    }
+
+    .footer-col ul {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: var(--spacing-sm);
+    }
+
+    .footer-col ul li {
+        margin-bottom: 0;
+    }
+
+    .footer-social {
+        justify-content: center;
+    }
+
+    .footer-bottom {
+        padding: var(--spacing-md);
+    }
+
+    .footer-copyright {
+        font-size: var(--text-xs);
+    }
+
     .payment-methods {
-        font-size: 0.8rem;
+        flex-wrap: wrap;
+        justify-content: center;
     }
 
     .payment-icon {
-        height: 20px;
+        height: 22px;
     }
 
     .footer-social {

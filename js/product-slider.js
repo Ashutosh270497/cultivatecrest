@@ -22,22 +22,10 @@ class ProductImageSlider {
         this.indicators.forEach((indicator, index) => {
             indicator.addEventListener('click', () => {
                 this.goToSlide(index);
-                this.resetAutoplay();
             });
         });
 
-        // Pause on hover
-        this.slider.parentElement.addEventListener('mouseenter', () => {
-            this.stopAutoplay();
-        });
-
-        // Resume on mouse leave
-        this.slider.parentElement.addEventListener('mouseleave', () => {
-            this.startAutoplay();
-        });
-
-        // Start autoplay
-        this.startAutoplay();
+        // Auto-sliding disabled - users can click indicators to change images
     }
 
     goToSlide(index) {

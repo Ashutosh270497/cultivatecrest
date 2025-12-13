@@ -21,6 +21,19 @@
     box-shadow: var(--shadow-md);
 }
 
+/* Product Link (clickable card wrapper) */
+.product-link {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+    flex: 1;
+}
+
+.product-link:hover {
+    text-decoration: none;
+    color: inherit;
+}
+
 .product-card .product-image {
     position: relative;
     width: 100%;
@@ -28,6 +41,22 @@
     overflow: hidden;
     background: var(--natural-gradient);
     border-radius: var(--radius-lg) var(--radius-lg) 0 0;
+}
+
+/* Direct image in product card (for related products) */
+.product-card .product-image > img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80%;
+    height: 80%;
+    object-fit: contain;
+    transition: transform var(--transition-base);
+}
+
+.product-card:hover .product-image > img {
+    transform: translate(-50%, -50%) scale(1.05);
 }
 
 /* Product Image Slider */
