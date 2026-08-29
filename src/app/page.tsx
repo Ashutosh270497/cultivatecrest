@@ -79,7 +79,6 @@ export default function HomePage() {
               alt="CultivateCrest premium chia seeds"
               width={1000}
               height={1000}
-              priority
               loading="eager"
               sizes="(max-width: 900px) 48vw, 28vw"
             />
@@ -89,7 +88,6 @@ export default function HomePage() {
               alt="CultivateCrest roasted pumpkin seeds"
               width={1000}
               height={1000}
-              priority
               loading="eager"
               sizes="(max-width: 900px) 48vw, 28vw"
             />
@@ -168,7 +166,16 @@ export default function HomePage() {
             </div>
             {comparison.map((row) => (
               <div className="comparison-row" role="row" key={row[0]}>
-                {row.map((cell, index) => <span role="cell" data-label={comparisonLabels[index]} key={cell}>{cell}</span>)}
+                {row.map((cell, index) => (
+                  <span
+                    role="cell"
+                    aria-label={`${comparisonLabels[index]}: ${cell}`}
+                    data-label={comparisonLabels[index]}
+                    key={cell}
+                  >
+                    {cell}
+                  </span>
+                ))}
               </div>
             ))}
           </div>

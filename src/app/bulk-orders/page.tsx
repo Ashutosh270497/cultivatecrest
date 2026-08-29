@@ -1,20 +1,47 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
-import { ArrowUpRight, Building2, Gift, Handshake, Hotel, PackageCheck, Store } from "lucide-react";
+import {
+  Apple,
+  ArrowDown,
+  ArrowUpRight,
+  Building2,
+  Flame,
+  Handshake,
+  Hotel,
+  Leaf,
+  Nut,
+  PackageCheck,
+  Soup,
+  Sprout,
+  Store,
+  Wheat,
+} from "lucide-react";
 import { emailUrl, siteConfig } from "@/config/site";
+import { bulkProductCategories, bulkProductCount, type BulkProductCategoryId } from "@/data/bulk-products";
 
 export const metadata: Metadata = {
   title: "Bulk Orders",
-  description: "Discuss CultivateCrest bulk seed supply for retail, hospitality, corporate wellness and distribution across India and the Middle East.",
+  description: "Explore the CultivateCrest bulk portfolio across seeds, dry fruits, herbal wellness, staples, pulses, spices, food-service powders and fruit nutrition.",
   alternates: { canonical: "/bulk-orders" },
 };
 
 const partnerTypes = [
-  { icon: Store, title: "Retail & marketplaces", text: "Curated wellness stores, supermarkets and specialist e-commerce partners." },
-  { icon: Hotel, title: "Hospitality & food service", text: "Hotels, cafés, kitchens and wellness-led food programmes." },
-  { icon: Gift, title: "Corporate & gifting", text: "Thoughtful packs for employee wellness, events and seasonal gifting." },
-  { icon: Building2, title: "Distribution", text: "Regional partners with established India or Middle East market reach." },
+  { icon: Building2, title: "Distributors & wholesalers", text: "Regional partners building dependable retail and institutional supply networks." },
+  { icon: Store, title: "Retail & e-commerce", text: "Modern retail chains, specialist stores, marketplaces and digital commerce partners." },
+  { icon: Hotel, title: "Hospitality & institutional", text: "Hotels, restaurants, cloud kitchens, manufacturers and institutional buyers." },
+  { icon: Handshake, title: "Export & private label", text: "International buyers and partners exploring market-ready or private-label programmes." },
 ];
+
+const categoryIcons = {
+  "superfood-seeds": Sprout,
+  "premium-dry-fruits": Nut,
+  "herbal-wellness": Leaf,
+  "essential-foods": Wheat,
+  "premium-spices": Flame,
+  "instant-food-powders": Soup,
+  "fruit-nutrition": Apple,
+} satisfies Record<BulkProductCategoryId, typeof Sprout>;
 
 export default function BulkOrdersPage() {
   return (
@@ -22,25 +49,91 @@ export default function BulkOrdersPage() {
       <section className="bulk-page-hero">
         <div className="shell bulk-page-grid">
           <div>
-            <p className="eyebrow eyebrow-light">India &amp; Middle East partnerships</p>
-            <h1>Premium seeds,<br /><em>ready to scale.</em></h1>
-            <p>Tell us what you need, where it needs to go, and how you plan to serve your customers. We will begin with fit, availability and next steps.</p>
-            <a
-              className="button button-gold"
-              href={emailUrl(
-                siteConfig.contact.general,
-                "CultivateCrest bulk order enquiry",
-                "Company:\nMarket or country:\nProducts of interest:\nApproximate quantity:\nTimeline:\n",
-              )}
-            >
-              Start an email brief <ArrowUpRight size={18} />
-            </a>
+            <p className="eyebrow eyebrow-light">India, Middle East &amp; international partnerships</p>
+            <h1>A broader food portfolio,<br /><em>ready to scale.</em></h1>
+            <p>Explore seeds, dry fruits, herbal wellness, staples, pulses, spices, food-service powders and fruit-based products for qualified commercial requirements.</p>
+            <div className="bulk-hero-actions">
+              <a
+                className="button button-gold"
+                href={emailUrl(
+                  siteConfig.contact.general,
+                  "CultivateCrest bulk order enquiry",
+                  "Company:\nMarket or country:\nProduct category and items:\nPreferred format (retail, food service, ingredient or private label):\nApproximate quantity:\nTimeline:\n",
+                )}
+              >
+                Start an email brief <ArrowUpRight size={18} />
+              </a>
+              <Link className="button button-outline-light" href="#bulk-range">
+                View the product range <ArrowDown size={17} />
+              </Link>
+            </div>
           </div>
-          <div className="bulk-facts-card">
-            <div><span>Markets</span><strong>India &amp; Middle East</strong></div>
-            <div><span>Core range</span><strong>Chia, flax, pumpkin &amp; sunflower</strong></div>
-            <div><span>Pack discussions</span><strong>Retail, gifting &amp; food-service needs</strong></div>
-            <div><span>First response</span><strong>Requirement review by our team</strong></div>
+          <div className="bulk-hero-panel">
+            <Image
+              src="/images/bulk/portfolio-ingredients-dark.jpg"
+              alt="CultivateCrest seeds, rice, pulses, spices, cashews and makhana"
+              fill
+              loading="eager"
+              sizes="(max-width: 900px) 92vw, 43vw"
+            />
+            <div className="bulk-facts-card">
+              <div><span>Portfolio</span><strong>{bulkProductCategories.length} categories · {bulkProductCount} listed products</strong></div>
+              <div><span>Formats</span><strong>Retail, food service, ingredient &amp; private label</strong></div>
+              <div><span>Capabilities</span><strong>Processing, packaging, export &amp; partnership supply</strong></div>
+              <div><span>Next step</span><strong>Specification and requirement review by our team</strong></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="section bulk-range-section" id="bulk-range">
+        <div className="shell">
+          <div className="bulk-range-intro">
+            <div>
+              <p className="eyebrow">The wholesale portfolio</p>
+              <h2>Naturally diverse.<br />Purposefully curated.</h2>
+              <p>From everyday pantry staples to wellness botanicals and food-service ingredients, the portfolio is organised to help buyers find the right commercial conversation quickly.</p>
+            </div>
+            <div className="bulk-range-stats" aria-label="Bulk portfolio summary">
+              <div><strong>{bulkProductCategories.length}</strong><span>product categories</span></div>
+              <div><strong>{bulkProductCount}</strong><span>listed products</span></div>
+            </div>
+          </div>
+
+          <figure className="bulk-range-visual">
+            <Image
+              src="/images/bulk/portfolio-ingredients-light.jpg"
+              alt="CultivateCrest portfolio of seeds, makhana, cashews, rice, pulses, spices, herbs and fruit powders"
+              fill
+              sizes="(max-width: 680px) 92vw, 88vw"
+            />
+            <figcaption>
+              <span>One supply conversation</span>
+              <strong>Seeds · Staples · Botanicals · Food-service ingredients</strong>
+            </figcaption>
+          </figure>
+
+          <div className="bulk-catalog-grid">
+            {bulkProductCategories.map((category, index) => {
+              const Icon = categoryIcons[category.id];
+              return (
+                <article className={`bulk-category-card bulk-category-tone-${(index % 3) + 1}`} key={category.id}>
+                  <div className="bulk-category-heading">
+                    <span className="bulk-category-icon"><Icon size={24} strokeWidth={1.6} aria-hidden="true" /></span>
+                    <div><span>0{index + 1}</span><h3>{category.title}</h3></div>
+                  </div>
+                  <p>{category.description}</p>
+                  <ul className={category.products.length > 5 ? "bulk-product-list is-dense" : "bulk-product-list"}>
+                    {category.products.map((product) => <li key={product}>{product}</li>)}
+                  </ul>
+                </article>
+              );
+            })}
+          </div>
+
+          <div className="bulk-range-note">
+            <PackageCheck size={21} aria-hidden="true" />
+            <p><strong>Portfolio-led, requirement-specific.</strong> Availability, specifications, formats, minimum quantities, private-label eligibility and destination-market requirements are confirmed during enquiry.</p>
           </div>
         </div>
       </section>
@@ -48,7 +141,7 @@ export default function BulkOrdersPage() {
       <section className="section partner-types-section">
         <div className="shell">
           <div className="section-heading">
-            <div><p className="eyebrow">Who we work with</p><h2>Built for more than one kind of shelf.</h2></div>
+            <div><p className="eyebrow">Who we work with</p><h2>Built for more than one kind of shelf.</h2><p className="section-description">Partnership models drawn from the CultivateCrest corporate portfolio.</p></div>
           </div>
           <div className="partner-grid">
             {partnerTypes.map(({ icon: Icon, title, text }) => (
