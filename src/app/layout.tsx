@@ -2,6 +2,7 @@ import type { Metadata, Viewport } from "next";
 import { Cormorant_Garamond, Manrope } from "next/font/google";
 import { SiteFooter } from "@/components/site-footer";
 import { SiteHeader } from "@/components/site-header";
+import { siteConfig } from "@/config/site";
 import "./globals.css";
 
 const bodyFont = Manrope({
@@ -18,7 +19,7 @@ const displayFont = Cormorant_Garamond({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://cultivatecrest.in"),
+  metadataBase: new URL(siteConfig.url),
   title: {
     default: "CultivateCrest | Premium Seeds for Everyday Wellness",
     template: "%s | CultivateCrest",
@@ -30,8 +31,8 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     locale: "en_IN",
-    url: "https://cultivatecrest.in",
-    siteName: "CultivateCrest",
+    url: siteConfig.url,
+    siteName: siteConfig.name,
     title: "CultivateCrest | Premium Seeds for Everyday Wellness",
     description: "Small seeds. Remarkable everyday nutrition.",
     images: [

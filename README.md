@@ -15,7 +15,10 @@ A premium, responsive CultivateCrest storefront built with Next.js 16 and React 
 
 ## Local development
 
+Use Node.js 22 (`.nvmrc` and `package.json` are aligned with the deployment runtime).
+
 ```bash
+nvm use
 npm install
 npm run dev
 ```
@@ -25,9 +28,10 @@ Open [http://localhost:3000](http://localhost:3000).
 ## Quality checks
 
 ```bash
-npm run lint
-npm run build
+npm run check
 ```
+
+`check` runs ESLint, TypeScript validation and a complete production build.
 
 ## Project structure
 
@@ -35,6 +39,7 @@ npm run build
 src/
   app/                 App Router pages, metadata routes and global styles
   components/          Shared storefront components
+  config/site.ts       Canonical URL, contact, social and Amazon settings
   data/products.json   Current product catalogue and Amazon links
   lib/catalog.ts       Typed catalogue normalisation and helpers
 public/
@@ -46,9 +51,22 @@ public/
 
 Product names, prices, pack variants, benefits, images and Amazon destinations live in `src/data/products.json`. The storefront currently treats displayed prices as indicative; Amazon confirms final price, stock, delivery and returns.
 
+Site-wide URLs, contact addresses, social profiles and the Amazon storefront URL live in `src/config/site.ts`.
+
 ## Vercel deployment
 
-Import the repository into Vercel and use the default Next.js settings. No runtime environment variables are required for the current Amazon-led release. Connect `cultivatecrest.in` only after validating the preview deployment and updating DNS from the existing GitHub Pages target.
+Vercel detects this repository as Next.js and does not require a custom `vercel.json`.
+
+1. Import the GitHub repository into Vercel.
+2. Keep the project root at the repository root and select the Next.js framework preset.
+3. Keep the default install command (`npm install`), build command (`npm run build`) and `.next` output handling.
+4. Use Node.js 22.x. The `engines` field enforces this automatically.
+5. Deploy the feature branch as a preview and validate it before promoting the deployment.
+6. Add `cultivatecrest.in` and, if required, `www.cultivatecrest.in` in the Vercel Domains settings. Choose one as canonical and redirect the other.
+
+No environment variables are required. `NEXT_PUBLIC_SITE_URL` is optional and defaults to `https://cultivatecrest.in`; set it only when a different canonical production origin is required.
+
+The former GitHub Pages `CNAME` and static HTML/CSS/JavaScript application have been removed. Legacy `.html` URLs are preserved through permanent Next.js redirects.
 
 ## Future commerce phase
 

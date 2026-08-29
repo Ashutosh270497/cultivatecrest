@@ -6,6 +6,7 @@ import { ProductCard } from "@/components/product-card";
 import { ProductGallery } from "@/components/product-gallery";
 import { ProductPurchase } from "@/components/product-purchase";
 import { SectionHeading } from "@/components/section-heading";
+import { absoluteUrl, siteConfig } from "@/config/site";
 import { getProduct, getRelatedProducts, products } from "@/lib/catalog";
 
 type ProductPageProps = { params: Promise<{ slug: string }> };
@@ -47,9 +48,9 @@ export default async function ProductPage({ params }: ProductPageProps) {
     "@context": "https://schema.org",
     "@type": "Product",
     name: product.name,
-    image: product.images.map((image) => `https://cultivatecrest.in${encodeURI(image)}`),
+    image: product.images.map((image) => absoluteUrl(encodeURI(image))),
     description: product.description,
-    brand: { "@type": "Brand", name: "CultivateCrest" },
+    brand: { "@type": "Brand", name: siteConfig.name },
     offers: {
       "@type": "Offer",
       url: product.amazonLink,

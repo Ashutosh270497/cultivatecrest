@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { ArrowUpRight, Camera, Mail } from "lucide-react";
+import { siteConfig } from "@/config/site";
 
 export function SiteFooter() {
   return (
@@ -32,10 +33,10 @@ export function SiteFooter() {
 
         <div className="footer-column footer-contact">
           <h2>Keep in touch</h2>
-          <a href="mailto:info@cultivatecrest.in">
-            <Mail size={17} aria-hidden="true" /> info@cultivatecrest.in
+          <a href={`mailto:${siteConfig.contact.general}`}>
+            <Mail size={17} aria-hidden="true" /> {siteConfig.contact.general}
           </a>
-          <a href="https://www.instagram.com/cultivatecrest/" target="_blank" rel="noopener noreferrer">
+          <a href={siteConfig.social.instagram} target="_blank" rel="noopener noreferrer">
             <Camera size={17} aria-hidden="true" /> Instagram <ArrowUpRight size={14} aria-hidden="true" />
           </a>
         </div>

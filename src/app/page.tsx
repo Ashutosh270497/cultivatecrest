@@ -13,6 +13,7 @@ import {
 } from "lucide-react";
 import { ProductCard } from "@/components/product-card";
 import { SectionHeading } from "@/components/section-heading";
+import { absoluteUrl, siteConfig } from "@/config/site";
 import { journalArticles, products } from "@/lib/catalog";
 
 const trustItems = [
@@ -35,13 +36,10 @@ export default function HomePage() {
   const organizationSchema = {
     "@context": "https://schema.org",
     "@type": "Organization",
-    name: "CultivateCrest",
-    url: "https://cultivatecrest.in",
-    logo: "https://cultivatecrest.in/images/logo.png",
-    sameAs: [
-      "https://www.instagram.com/cultivatecrest/",
-      "https://www.facebook.com/profile.php?id=61579096583214",
-    ],
+    name: siteConfig.name,
+    url: siteConfig.url,
+    logo: absoluteUrl("/images/logo.png"),
+    sameAs: [siteConfig.social.instagram, siteConfig.social.facebook],
   };
 
   return (

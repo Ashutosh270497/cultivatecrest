@@ -34,11 +34,19 @@ build/
 .next/
 out/
 next-env.d.ts
+*.tsbuildinfo
+
+# Tests and Coverage
+coverage/
+playwright-report/
+test-results/
+
+# Vercel project linkage
+.vercel/
 
 # Environment Variables (if added later)
-.env
-.env.local
-.env.*.local
+.env*
+!.env.example
 
 # Backup Files
 *.bak
