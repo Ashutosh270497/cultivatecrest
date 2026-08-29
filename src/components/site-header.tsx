@@ -4,6 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { ArrowUpRight, Menu, X } from "lucide-react";
 import { useEffect, useState } from "react";
+import { siteConfig } from "@/config/site";
 
 const links = [
   { href: "/products", label: "Shop" },
@@ -57,7 +58,7 @@ export function SiteHeader() {
 
           <a
             className="header-cta"
-            href="https://www.amazon.in/s?k=cultivatecrest"
+            href={siteConfig.amazonStoreUrl}
             target="_blank"
             rel="noopener noreferrer"
           >
@@ -75,7 +76,7 @@ export function SiteHeader() {
           </nav>
           <a
             className="button button-primary button-wide"
-            href="https://www.amazon.in/s?k=cultivatecrest"
+            href={siteConfig.amazonStoreUrl}
             target="_blank"
             rel="noopener noreferrer"
           >

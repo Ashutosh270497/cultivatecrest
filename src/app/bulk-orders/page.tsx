@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { ArrowUpRight, Building2, Gift, Handshake, Hotel, PackageCheck, Store } from "lucide-react";
+import { emailUrl, siteConfig } from "@/config/site";
 
 export const metadata: Metadata = {
   title: "Bulk Orders",
@@ -24,7 +25,14 @@ export default function BulkOrdersPage() {
             <p className="eyebrow eyebrow-light">India &amp; Middle East partnerships</p>
             <h1>Premium seeds,<br /><em>ready to scale.</em></h1>
             <p>Tell us what you need, where it needs to go, and how you plan to serve your customers. We will begin with fit, availability and next steps.</p>
-            <a className="button button-gold" href="mailto:info@cultivatecrest.in?subject=CultivateCrest%20bulk%20order%20enquiry&body=Company%3A%0AMarket%20or%20country%3A%0AProducts%20of%20interest%3A%0AApproximate%20quantity%3A%0ATimeline%3A%0A">
+            <a
+              className="button button-gold"
+              href={emailUrl(
+                siteConfig.contact.general,
+                "CultivateCrest bulk order enquiry",
+                "Company:\nMarket or country:\nProducts of interest:\nApproximate quantity:\nTimeline:\n",
+              )}
+            >
               Start an email brief <ArrowUpRight size={18} />
             </a>
           </div>
@@ -65,7 +73,7 @@ export default function BulkOrdersPage() {
         <div className="shell bulk-contact-card">
           <div className="bulk-contact-icon"><Handshake size={34} /></div>
           <div><p className="eyebrow">Ready when you are</p><h2>Share the opportunity.</h2><p>No generic form and no pretend confirmation—email your brief directly to the CultivateCrest team.</p></div>
-          <a className="button button-primary" href="mailto:info@cultivatecrest.in?subject=CultivateCrest%20bulk%20order%20enquiry">Email the team <ArrowUpRight size={18} /></a>
+          <a className="button button-primary" href={emailUrl(siteConfig.contact.general, "CultivateCrest bulk order enquiry")}>Email the team <ArrowUpRight size={18} /></a>
         </div>
         <div className="shell bulk-retail-note"><PackageCheck size={18} /><p>Looking for a personal retail order? <Link href="/products">Shop the consumer range</Link> through Amazon India.</p></div>
       </section>

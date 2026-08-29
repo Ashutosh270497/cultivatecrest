@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { emailUrl, siteConfig } from "@/config/site";
 
 export const metadata: Metadata = {
   title: "Shipping & Returns",
@@ -34,7 +35,7 @@ export default function ShippingReturnsPage() {
         <section>
           <h2>Product-quality concern</h2>
           <p>If a pack arrives damaged or you have a product-quality question, retain the pack, batch details and photographs. Contact our support team and include your Amazon order number so we can review the concern.</p>
-          <a className="button button-primary" href="mailto:support@cultivatecrest.in?subject=CultivateCrest%20product%20support">Email product support</a>
+          <a className="button button-primary" href={emailUrl(siteConfig.contact.support, "CultivateCrest product support")}>Email product support</a>
         </section>
         <aside className="legal-note"><strong>Planning a business order?</strong><span>Bulk and distribution requirements are discussed directly with our team.</span><Link href="/bulk-orders">Visit bulk orders</Link></aside>
       </article>

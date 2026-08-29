@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { ArrowUpRight, Camera, Clock3, Mail, MapPin } from "lucide-react";
+import { emailUrl, siteConfig } from "@/config/site";
 
 export const metadata: Metadata = {
   title: "Contact",
@@ -29,8 +30,8 @@ export default function ContactPage() {
             <span>Best first step</span>
             <h2>Email our team</h2>
             <p>Include the product, pack size and order or requirement details so we can respond efficiently.</p>
-            <a className="button button-gold button-wide" href="mailto:info@cultivatecrest.in?subject=CultivateCrest%20enquiry">
-              info@cultivatecrest.in <ArrowUpRight size={18} />
+            <a className="button button-gold button-wide" href={emailUrl(siteConfig.contact.general, "CultivateCrest enquiry")}>
+              {siteConfig.contact.general} <ArrowUpRight size={18} />
             </a>
           </div>
         </div>
@@ -42,7 +43,7 @@ export default function ContactPage() {
             <Mail size={23} />
             <h2>Product &amp; general support</h2>
             <p>Questions about a pack, product information or quality documentation.</p>
-            <a href="mailto:support@cultivatecrest.in">support@cultivatecrest.in</a>
+            <a href={`mailto:${siteConfig.contact.support}`}>{siteConfig.contact.support}</a>
           </article>
           <article className="contact-option">
             <MapPin size={23} />
@@ -54,7 +55,7 @@ export default function ContactPage() {
             <Camera size={23} />
             <h2>Follow the brand</h2>
             <p>Product updates, serving ideas and everyday wellness inspiration.</p>
-            <a href="https://www.instagram.com/cultivatecrest/" target="_blank" rel="noopener noreferrer">@cultivatecrest</a>
+            <a href={siteConfig.social.instagram} target="_blank" rel="noopener noreferrer">@cultivatecrest</a>
           </article>
           <article className="contact-option">
             <Clock3 size={23} />
