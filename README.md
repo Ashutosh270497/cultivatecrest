@@ -64,7 +64,7 @@ Vercel detects this repository as Next.js and does not require a custom `vercel.
 5. Deploy the feature branch as a preview and validate it before promoting the deployment.
 6. Add `cultivatecrest.in` and, if required, `www.cultivatecrest.in` in the Vercel Domains settings. Choose one as canonical and redirect the other.
 
-No environment variables are required. `NEXT_PUBLIC_SITE_URL` is optional and defaults to `https://cultivatecrest.in`; set it only when a different canonical production origin is required.
+No environment variables are required. `NEXT_PUBLIC_SITE_URL` is optional and defaults safely to `https://cultivatecrest.in` when it is missing, blank or malformed. In Vercel, either remove this variable or set it to a complete canonical origin such as `https://cultivatecrest.in`.
 
 The former GitHub Pages `CNAME` and static HTML/CSS/JavaScript application have been removed. Legacy `.html` URLs are preserved through permanent Next.js redirects.
 

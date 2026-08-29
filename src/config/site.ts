@@ -1,8 +1,25 @@
-const configuredSiteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? "https://cultivatecrest.in";
+const defaultSiteUrl = "https://cultivatecrest.in";
+
+function resolveSiteUrl(value: string | undefined) {
+  const candidate = value?.trim();
+
+  if (!candidate) {
+    return defaultSiteUrl;
+  }
+
+  const valueWithProtocol = /^https?:\/\//i.test(candidate) ? candidate : `https://${candidate}`;
+
+  try {
+    const url = new URL(valueWithProtocol);
+    return url.origin;
+  } catch {
+    return defaultSiteUrl;
+  }
+}
 
 export const siteConfig = {
   name: "CultivateCrest",
-  url: new URL(configuredSiteUrl).origin,
+  url: resolveSiteUrl(process.env.NEXT_PUBLIC_SITE_URL),
   description:
     "Premium chia, flax, pumpkin and sunflower seeds, carefully packed in India for everyday wellness.",
   contact: {
