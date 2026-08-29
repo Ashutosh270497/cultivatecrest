@@ -31,6 +31,9 @@ yarn-error.log*
 # Build Files (if you add build tools later)
 dist/
 build/
+.next/
+out/
+next-env.d.ts
 
 # Environment Variables (if added later)
 .env
