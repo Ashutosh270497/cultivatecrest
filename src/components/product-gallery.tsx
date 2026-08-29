@@ -14,7 +14,6 @@ export function ProductGallery({ images, name }: { images: string[]; name: strin
           src={visibleImages[active]}
           alt={`${name} – view ${active + 1}`}
           fill
-          priority
           loading="eager"
           sizes="(max-width: 900px) 92vw, 52vw"
         />
@@ -30,7 +29,14 @@ export function ProductGallery({ images, name }: { images: string[]; name: strin
               aria-pressed={active === index}
               key={image}
             >
-              <Image src={image} alt="" width={160} height={160} sizes="72px" />
+              <Image
+                src={image}
+                alt=""
+                width={160}
+                height={160}
+                loading={index === 0 ? "eager" : "lazy"}
+                sizes="72px"
+              />
             </button>
           ))}
         </div>

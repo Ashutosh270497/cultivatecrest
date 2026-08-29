@@ -18,14 +18,34 @@ export function SiteHeader() {
   const [open, setOpen] = useState(false);
 
   useEffect(() => {
-    document.body.style.overflow = open ? "hidden" : "";
+    if (!open) return;
+
+    const previousOverflow = document.body.style.overflow;
+    const closeOnEscape = (event: KeyboardEvent) => {
+      if (event.key === "Escape") setOpen(false);
+    };
+
+    document.body.style.overflow = "hidden";
+    window.addEventListener("keydown", closeOnEscape);
+
     return () => {
-      document.body.style.overflow = "";
+      document.body.style.overflow = previousOverflow;
+      window.removeEventListener("keydown", closeOnEscape);
     };
   }, [open]);
 
+  useEffect(() => {
+    const desktopQuery = window.matchMedia("(min-width: 901px)");
+    const closeOnDesktop = (event: MediaQueryListEvent) => {
+      if (event.matches) setOpen(false);
+    };
+
+    desktopQuery.addEventListener("change", closeOnDesktop);
+    return () => desktopQuery.removeEventListener("change", closeOnDesktop);
+  }, []);
+
   return (
-    <>
+    <div className="site-header-stack">
       <div className="announcement-bar">
         <div className="shell announcement-inner">
           <span>Premium seed essentials, carefully packed in India</span>
@@ -39,13 +59,14 @@ export function SiteHeader() {
             type="button"
             aria-label={open ? "Close navigation" : "Open navigation"}
             aria-expanded={open}
+            aria-controls="mobile-navigation"
             onClick={() => setOpen((value) => !value)}
           >
             {open ? <X aria-hidden="true" /> : <Menu aria-hidden="true" />}
           </button>
 
           <Link className="brand" href="/" aria-label="CultivateCrest home" onClick={() => setOpen(false)}>
-            <Image src="/images/logo.png" alt="CultivateCrest" width={1504} height={755} priority loading="eager" />
+            <Image src="/images/logo.png" alt="CultivateCrest" width={1504} height={755} loading="eager" />
           </Link>
 
           <nav className="desktop-nav" aria-label="Primary navigation">
@@ -66,7 +87,7 @@ export function SiteHeader() {
           </a>
         </div>
 
-        <div className={`mobile-drawer ${open ? "is-open" : ""}`} aria-hidden={!open}>
+        <div id="mobile-navigation" className={`mobile-drawer ${open ? "is-open" : ""}`} aria-hidden={!open}>
           <nav aria-label="Mobile navigation">
             {links.map((link) => (
               <Link href={link.href} key={link.href} onClick={() => setOpen(false)}>
@@ -86,6 +107,6 @@ export function SiteHeader() {
         </div>
         {open && <button className="drawer-scrim" aria-label="Close navigation" onClick={() => setOpen(false)} />}
       </header>
-    </>
+    </div>
   );
 }

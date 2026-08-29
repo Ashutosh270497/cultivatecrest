@@ -3,7 +3,7 @@ import Link from "next/link";
 import { ArrowUpRight, Star } from "lucide-react";
 import { discountPercentage, type Product } from "@/lib/catalog";
 
-export function ProductCard({ product }: { product: Product }) {
+export function ProductCard({ product, eager = false }: { product: Product; eager?: boolean }) {
   const discount = discountPercentage(product);
 
   return (
@@ -15,6 +15,7 @@ export function ProductCard({ product }: { product: Product }) {
           alt={`${product.name} pack`}
           width={1000}
           height={1000}
+          loading={eager ? "eager" : "lazy"}
           sizes="(max-width: 640px) 88vw, (max-width: 1024px) 44vw, 25vw"
         />
       </Link>

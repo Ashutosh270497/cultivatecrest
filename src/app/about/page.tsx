@@ -27,7 +27,7 @@ export default function AboutPage() {
             <p>CultivateCrest brings premium seed essentials into modern kitchens without making wellness feel complicated.</p>
           </div>
           <div className="about-hero-image">
-            <Image src="/images/Banners/A+_3.png" alt="CultivateCrest seed packs for a mindful lifestyle" fill priority loading="eager" sizes="(max-width: 900px) 92vw, 45vw" />
+            <Image src="/images/Banners/A+_3.png" alt="CultivateCrest seed packs for a mindful lifestyle" fill loading="eager" sizes="(max-width: 900px) 92vw, 45vw" />
           </div>
         </div>
       </section>

@@ -24,7 +24,7 @@ export default function JournalPage() {
       <section className="section journal-page-section">
         <div className="shell journal-feature">
           <div className="journal-feature-image">
-            <Image src="/images/Banners/A+_2.png" alt="Everyday seed recipe ideas" fill priority sizes="(max-width: 900px) 92vw, 55vw" />
+            <Image src="/images/Banners/A+_2.png" alt="Everyday seed recipe ideas" fill loading="eager" sizes="(max-width: 900px) 92vw, 55vw" />
           </div>
           <div>
             <p className="eyebrow">Start here</p>

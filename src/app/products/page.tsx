@@ -25,7 +25,9 @@ export default function ProductsPage() {
             <p>Natural ingredients · Resealable packs · India-wide Amazon fulfilment</p>
           </div>
           <div className="product-grid-new">
-            {products.map((product) => <ProductCard product={product} key={product.id} />)}
+            {products.map((product, index) => (
+              <ProductCard product={product} eager={index === 0} key={product.id} />
+            ))}
           </div>
           <p className="price-disclaimer">Displayed prices are indicative. Final price and availability are confirmed on Amazon India.</p>
         </div>
