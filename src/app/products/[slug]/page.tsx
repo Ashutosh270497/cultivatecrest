@@ -74,7 +74,7 @@ export default async function ProductPage({ params }: ProductPageProps) {
           <div className="product-detail-grid-new">
             <ProductGallery images={product.images} name={product.name} />
             <div className="product-info-new">
-              <p className="eyebrow">Premium seed essential</p>
+              <p className="eyebrow">{product.category === "combo" ? "Curated seed combo" : "Premium seed essential"}</p>
               <h1>{product.name}</h1>
               {product.rating && (
                 <div className="product-detail-rating">

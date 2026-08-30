@@ -15,7 +15,7 @@ export default function ProductsPage() {
         <div className="shell page-hero-inner">
           <p className="eyebrow">The CultivateCrest collection</p>
           <h1>Everyday seeds,<br />chosen with care.</h1>
-          <p>Four pantry essentials in practical pack sizes. Explore the range here, then choose Amazon India or Flipkart to complete your purchase.</p>
+          <p>Four pantry essentials and four convenient combo packs. Explore the complete range here, then choose Amazon India or Flipkart to complete your purchase.</p>
         </div>
       </section>
       <section className="section">

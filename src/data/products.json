@@ -330,5 +330,146 @@
       "Low glycemic index",
       "Rich in antioxidants"
     ]
+  },
+  {
+    "id": 13,
+    "name": "Chia Seeds Twin Pack",
+    "category": "combo",
+    "price": 597,
+    "originalPrice": 999,
+    "active": true,
+    "description": "A convenient twin pack with two 500g pouches of raw chia seeds. Naturally rich in omega-3, fibre and plant protein, with a mild taste that works easily in smoothies, breakfast bowls, yogurt and baking.",
+    "image": "images/products/Combo_Packs/chia-duo-main.jpg",
+    "images": [
+      "images/products/Combo_Packs/chia-duo-main.jpg",
+      "images/products/Combo_Packs/chia-duo-combo.jpg",
+      "images/products/Combo_Packs/chia-duo-pack.jpg",
+      "images/products/Combo_Packs/chia-duo-detail-1.jpg",
+      "images/products/Combo_Packs/chia-duo-detail-2.jpg"
+    ],
+    "icon": "fa-boxes",
+    "amazonLink": "https://link.amazon/B00pFw1Yy",
+    "flipkartLink": "https://dl.flipkart.com/s/2!QVVrNNNN",
+    "variants": ["2 × 500g"],
+    "variantPricing": {
+      "2 × 500g": {
+        "price": 597,
+        "originalPrice": 999,
+        "discount": 40
+      }
+    },
+    "benefits": [
+      "Two 500g resealable pouches for a longer-lasting pantry supply",
+      "Naturally rich in plant-based omega-3 fatty acids",
+      "High-fibre addition to everyday meals and snacks",
+      "Mild flavour that blends easily into sweet or savoury recipes",
+      "Raw seeds with no artificial additives or preservatives"
+    ]
+  },
+  {
+    "id": 14,
+    "name": "Sunflower & Pumpkin Seeds Combo",
+    "category": "combo",
+    "price": 757,
+    "originalPrice": 1499,
+    "active": true,
+    "description": "A generous 1kg combination of sunflower and pumpkin seeds, packed as two 500g pouches. Crisp, nutty and naturally rich in plant protein, fibre, magnesium and healthy fats for snacking, salads and trail mixes.",
+    "image": "images/products/Combo_Packs/sunflower-pumpkin-main.jpg",
+    "images": [
+      "images/products/Combo_Packs/sunflower-pumpkin-main.jpg",
+      "images/products/Combo_Packs/sunflower-pumpkin-combo.jpg",
+      "images/products/Combo_Packs/sunflower-pumpkin-detail.jpg",
+      "images/products/Combo_Packs/sunflower-pumpkin-sunflower.jpg",
+      "images/products/Combo_Packs/sunflower-pumpkin-pumpkin.jpg"
+    ],
+    "icon": "fa-boxes",
+    "amazonLink": "https://link.amazon/B0cmQ887I",
+    "flipkartLink": "https://dl.flipkart.com/s/La0NGHuuuN",
+    "variants": ["2 × 500g"],
+    "variantPricing": {
+      "2 × 500g": {
+        "price": 757,
+        "originalPrice": 1499,
+        "discount": 49
+      }
+    },
+    "benefits": [
+      "Two complementary seed varieties in convenient 500g pouches",
+      "Naturally rich in plant protein, fibre and healthy fats",
+      "Pumpkin seeds provide magnesium and zinc",
+      "Sunflower seeds contribute vitamin E and a light crunch",
+      "Versatile for snacking, salads, baking and homemade trail mixes"
+    ]
+  },
+  {
+    "id": 15,
+    "name": "Four Seed Superfood Combo",
+    "category": "combo",
+    "price": 502,
+    "originalPrice": 1025,
+    "active": true,
+    "description": "Four individually packed 200g seed essentials—chia, flax, pumpkin and sunflower—in one balanced 800g collection. A practical way to rotate textures and nutrients through breakfast, snacks and everyday recipes.",
+    "image": "images/products/Combo_Packs/four-seed-main.jpg",
+    "images": [
+      "images/products/Combo_Packs/four-seed-main.jpg",
+      "images/products/Combo_Packs/four-seed-combo.jpg",
+      "images/products/Combo_Packs/four-seed-chia.jpg",
+      "images/products/Combo_Packs/four-seed-pumpkin.jpg",
+      "images/products/Combo_Packs/four-seed-flax.jpg",
+      "images/products/Combo_Packs/four-seed-sunflower.jpg"
+    ],
+    "icon": "fa-gift",
+    "amazonLink": "https://link.amazon/B02kqCmND",
+    "flipkartLink": "https://dl.flipkart.com/s/2O5mWZNNNN",
+    "variants": ["4 × 200g"],
+    "variantPricing": {
+      "4 × 200g": {
+        "price": 502,
+        "originalPrice": 1025,
+        "discount": 51
+      }
+    },
+    "benefits": [
+      "Includes chia, flax, pumpkin and sunflower seeds",
+      "Four separate 200g pouches help preserve freshness",
+      "A varied mix of fibre, plant protein and healthy fats",
+      "Easy to rotate across smoothies, oats, salads and baking",
+      "Raw, vegan and gluten-free pantry selection"
+    ]
+  },
+  {
+    "id": 16,
+    "name": "Chia & Pumpkin Seeds Combo",
+    "category": "combo",
+    "price": 309,
+    "originalPrice": 588,
+    "active": true,
+    "description": "A two-pouch combination pairing 200g of mild chia seeds with 200g of crunchy pumpkin seeds. It brings omega-3, fibre, magnesium and plant protein together in a versatile 400g everyday pack.",
+    "image": "images/products/Combo_Packs/chia-pumpkin-main.jpg",
+    "images": [
+      "images/products/Combo_Packs/chia-pumpkin-main.jpg",
+      "images/products/Combo_Packs/chia-pumpkin-combo.jpg",
+      "images/products/Combo_Packs/chia-pumpkin-chia.jpg",
+      "images/products/Combo_Packs/chia-pumpkin-pumpkin.jpg",
+      "images/products/Combo_Packs/chia-pumpkin-detail.jpg"
+    ],
+    "icon": "fa-boxes",
+    "amazonLink": "https://link.amazon/B0cWmG3oK",
+    "flipkartLink": "https://dl.flipkart.com/s/LTaaJ3uuuN",
+    "variants": ["2 × 200g"],
+    "variantPricing": {
+      "2 × 200g": {
+        "price": 309,
+        "originalPrice": 588,
+        "discount": 47
+      }
+    },
+    "benefits": [
+      "One 200g chia pouch and one 200g pumpkin seed pouch",
+      "Combines omega-3 and fibre with magnesium and zinc",
+      "Contrasting mild and crunchy textures for flexible use",
+      "Suitable for smoothies, yogurt, salads and direct snacking",
+      "Raw seeds with no artificial additives or preservatives"
+    ]
   }
 ]

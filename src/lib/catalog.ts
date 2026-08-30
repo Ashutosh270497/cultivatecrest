@@ -70,6 +70,34 @@ const productDetails: Record<number, Pick<Product, "slug" | "shortName" | "nutri
     bestFor: "Salads, trail mixes and baking",
     flavour: "Light and crisp",
   },
+  13: {
+    slug: "chia-seeds-twin-pack",
+    shortName: "Chia twin pack",
+    nutritionFocus: "Omega-3, fibre & plant protein",
+    bestFor: "Family breakfasts, smoothies and baking",
+    flavour: "Mild and versatile",
+  },
+  14: {
+    slug: "sunflower-pumpkin-seeds-combo",
+    shortName: "Sunflower + pumpkin",
+    nutritionFocus: "Plant protein, magnesium & healthy fats",
+    bestFor: "Snacking, salads and trail mixes",
+    flavour: "Nutty and crisp",
+  },
+  15: {
+    slug: "four-seed-superfood-combo",
+    shortName: "Four-seed combo",
+    nutritionFocus: "Fibre, protein & varied micronutrients",
+    bestFor: "A balanced everyday seed rotation",
+    flavour: "Mild, nutty and crunchy",
+  },
+  16: {
+    slug: "chia-pumpkin-seeds-combo",
+    shortName: "Chia + pumpkin",
+    nutritionFocus: "Omega-3, magnesium & fibre",
+    bestFor: "Smoothies, bowls and direct snacking",
+    flavour: "Mild with a nutty crunch",
+  },
 };
 
 function publicPath(path?: string) {
