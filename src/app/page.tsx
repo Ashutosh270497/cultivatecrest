@@ -50,7 +50,13 @@ export default function HomePage() {
         <div className="shell hero-grid">
           <div className="hero-copy">
             <p className="eyebrow"><Sparkles size={15} aria-hidden="true" /> Premium seed essentials</p>
-            <h1>Small seeds.<br /><em>Remarkable</em> everyday nutrition.</h1>
+            <h1>
+              Small seeds.<br />
+              <em className="remarkable-wave" aria-label="Remarkable">
+                {"Remarkable".split("").map((letter, index) => <span aria-hidden="true" key={`${letter}-${index}`}>{letter}</span>)}
+              </em>{" "}
+              everyday nutrition.
+            </h1>
             <p className="hero-description">
               Premium chia, flax, pumpkin and sunflower seeds—selected for freshness, thoughtfully packed in India,
               and made for everyday rituals.
