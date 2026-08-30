@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
-import { ArrowUpRight, Star } from "lucide-react";
+import { Star } from "lucide-react";
+import { MarketplaceLinks } from "@/components/marketplace-links";
 import { discountPercentage, type Product } from "@/lib/catalog";
 
 export function ProductCard({ product, eager = false }: { product: Product; eager?: boolean }) {
@@ -38,15 +39,11 @@ export function ProductCard({ product, eager = false }: { product: Product; eage
             <strong>₹{product.price}</strong>
             <del>₹{product.originalPrice}</del>
           </div>
-          <a
-            className="amazon-button"
-            href={product.amazonLink}
-            target="_blank"
-            rel="noopener noreferrer"
-            aria-label={`Buy ${product.name} on Amazon India`}
-          >
-            Buy on Amazon <ArrowUpRight size={16} aria-hidden="true" />
-          </a>
+          <MarketplaceLinks
+            amazonLink={product.amazonLink}
+            flipkartLink={product.flipkartLink}
+            productName={product.name}
+          />
         </div>
       </div>
     </article>

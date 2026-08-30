@@ -19,6 +19,7 @@ export type Product = {
   image: string;
   images: string[];
   amazonLink: string;
+  flipkartLink?: string;
   rating?: number;
   reviews?: number;
   variants: string[];

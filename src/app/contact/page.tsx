@@ -10,10 +10,10 @@ export const metadata: Metadata = {
 };
 
 const faqs = [
-  ["Where can I buy CultivateCrest products?", "Current retail purchases are completed through Amazon India. Every product page clearly links to the relevant Amazon listing."],
-  ["Can you help with an Amazon order?", "Amazon manages payment, tracking, delivery and returns. For product-quality questions, contact us with the order details and pack information."],
+  ["Where can I buy CultivateCrest products?", "Current retail purchases are completed through Amazon India or Flipkart. Every product page clearly links to the available marketplace listings."],
+  ["Can you help with a marketplace order?", "Amazon or Flipkart manages payment, tracking, delivery and returns for orders placed on its platform. For product-quality questions, contact us with the order details and pack information."],
   ["Do you support bulk orders?", "Yes. We welcome conversations with retailers, hospitality groups, distributors, corporate wellness programmes and gifting partners."],
-  ["Do you supply the Middle East?", "We are open to qualified bulk and distribution opportunities across the Middle East. Retail Amazon fulfilment is currently focused on India."],
+  ["Do you supply the Middle East?", "We are open to qualified bulk and distribution opportunities across the Middle East. Retail marketplace fulfilment is currently focused on India."],
 ];
 
 export default function ContactPage() {

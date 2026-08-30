@@ -43,7 +43,7 @@ export function SiteFooter() {
       </div>
       <div className="shell footer-bottom">
         <p>© {new Date().getFullYear()} CultivateCrest. All rights reserved.</p>
-        <p>Purchases are completed securely on Amazon India.</p>
+        <p>Retail purchases are completed on Amazon India or Flipkart.</p>
       </div>
     </footer>
   );

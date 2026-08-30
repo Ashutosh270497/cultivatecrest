@@ -168,7 +168,7 @@ export default function BulkOrdersPage() {
           <div><p className="eyebrow">Ready when you are</p><h2>Share the opportunity.</h2><p>No generic form and no pretend confirmation—email your brief directly to the CultivateCrest team.</p></div>
           <a className="button button-primary" href={emailUrl(siteConfig.contact.general, "CultivateCrest bulk order enquiry")}>Email the team <ArrowUpRight size={18} /></a>
         </div>
-        <div className="shell bulk-retail-note"><PackageCheck size={18} /><p>Looking for a personal retail order? <Link href="/products">Shop the consumer range</Link> through Amazon India.</p></div>
+        <div className="shell bulk-retail-note"><PackageCheck size={18} /><p>Looking for a personal retail order? <Link href="/products">Shop the consumer range</Link> through Amazon India or Flipkart.</p></div>
       </section>
     </main>
   );

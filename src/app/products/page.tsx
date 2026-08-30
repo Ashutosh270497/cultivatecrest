@@ -15,21 +15,21 @@ export default function ProductsPage() {
         <div className="shell page-hero-inner">
           <p className="eyebrow">The CultivateCrest collection</p>
           <h1>Everyday seeds,<br />chosen with care.</h1>
-          <p>Four pantry essentials in practical pack sizes. Explore the range here, then complete your purchase securely on Amazon India.</p>
+          <p>Four pantry essentials in practical pack sizes. Explore the range here, then choose Amazon India or Flipkart to complete your purchase.</p>
         </div>
       </section>
       <section className="section">
         <div className="shell">
           <div className="collection-intro">
             <p>{products.length} products</p>
-            <p>Natural ingredients · Resealable packs · India-wide Amazon fulfilment</p>
+            <p>Natural ingredients · Resealable packs · Trusted marketplace checkout</p>
           </div>
           <div className="product-grid-new">
             {products.map((product, index) => (
               <ProductCard product={product} eager={index === 0} key={product.id} />
             ))}
           </div>
-          <p className="price-disclaimer">Displayed prices are indicative. Final price and availability are confirmed on Amazon India.</p>
+          <p className="price-disclaimer">Displayed prices are indicative. Final price and availability are confirmed by the marketplace you choose.</p>
         </div>
       </section>
     </main>
