@@ -1,7 +1,8 @@
 "use client";
 
-import { ArrowUpRight, ShieldCheck } from "lucide-react";
+import { ShieldCheck } from "lucide-react";
 import { useState } from "react";
+import { MarketplaceLinks } from "@/components/marketplace-links";
 import type { Product } from "@/lib/catalog";
 
 export function ProductPurchase({ product }: { product: Product }) {
@@ -37,12 +38,16 @@ export function ProductPurchase({ product }: { product: Product }) {
         <del>₹{pricing.originalPrice}</del>
         {discount > 0 && <span>Save {discount}%</span>}
       </div>
-      <a className="button button-primary button-wide" href={product.amazonLink} target="_blank" rel="noopener noreferrer">
-        Buy {variant} on Amazon <ArrowUpRight size={18} aria-hidden="true" />
-      </a>
+      <MarketplaceLinks
+        amazonLink={product.amazonLink}
+        flipkartLink={product.flipkartLink}
+        productName={product.name}
+        variant={variant}
+        wide
+      />
       <div className="secure-note">
         <ShieldCheck size={19} aria-hidden="true" />
-        <p><strong>Secure Amazon checkout</strong><span>Final price, delivery and returns are confirmed on Amazon India.</span></p>
+        <p><strong>Trusted marketplace checkout</strong><span>Final price, delivery and returns are confirmed by the marketplace you choose.</span></p>
       </div>
     </div>
   );

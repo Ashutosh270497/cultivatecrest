@@ -19,7 +19,7 @@ import { journalArticles, products } from "@/lib/catalog";
 const trustItems = [
   { icon: FlaskConical, title: "Lab-tested quality", text: "Carefully assessed for purity and consistency" },
   { icon: BadgeCheck, title: "FSSAI registered", text: "Packed with food-safety standards in mind" },
-  { icon: ShieldCheck, title: "Secure Amazon checkout", text: "Trusted ordering and delivery across India" },
+  { icon: ShieldCheck, title: "Trusted marketplace checkout", text: "Shop through Amazon India or Flipkart" },
   { icon: Globe2, title: "Bulk-order ready", text: "Supply conversations for India and the Middle East" },
 ];
 
@@ -65,7 +65,7 @@ export default function HomePage() {
             </div>
             <div className="hero-note">
               <div className="hero-note-icon"><PackageCheck size={19} aria-hidden="true" /></div>
-              <p><strong>Available in 200g and 500g packs</strong><span>Shop securely through Amazon India</span></p>
+              <p><strong>Available in 200g and 500g packs</strong><span>Choose Amazon India or Flipkart</span></p>
             </div>
           </div>
 
@@ -121,7 +121,7 @@ export default function HomePage() {
           <div className="product-grid-new">
             {products.map((product) => <ProductCard product={product} key={product.id} />)}
           </div>
-          <p className="price-disclaimer">Displayed prices are indicative. Final price and availability are confirmed on Amazon India.</p>
+          <p className="price-disclaimer">Displayed prices are indicative. Final price and availability are confirmed by the marketplace you choose.</p>
         </div>
       </section>
 

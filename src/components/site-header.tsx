@@ -103,7 +103,7 @@ export function SiteHeader() {
           >
             Shop on Amazon <ArrowUpRight size={17} aria-hidden="true" />
           </a>
-          <p>Amazon checkout is currently available for customers in India.</p>
+          <p>Product-specific Amazon and Flipkart checkout links are available for customers in India.</p>
         </div>
         {open && <button className="drawer-scrim" aria-label="Close navigation" onClick={() => setOpen(false)} />}
       </header>

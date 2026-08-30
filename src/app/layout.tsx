@@ -25,7 +25,7 @@ export const metadata: Metadata = {
     template: "%s | CultivateCrest",
   },
   description:
-    "Premium chia, flax, pumpkin and sunflower seeds, carefully packed in India. Shop on Amazon India or enquire for bulk supply across India and the Middle East.",
+    "Premium chia, flax, pumpkin and sunflower seeds, carefully packed in India. Shop on Amazon India or Flipkart, or enquire for bulk supply across India and the Middle East.",
   keywords: ["premium seeds", "chia seeds", "flax seeds", "pumpkin seeds", "sunflower seeds", "India"],
   alternates: { canonical: "/" },
   openGraph: {

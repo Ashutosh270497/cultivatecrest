@@ -72,7 +72,7 @@ export default function AboutPage() {
             <h2>Better information builds better trust.</h2>
             <p>Product pages should explain what is in the pack, how to use it, and where the final transaction happens. Clear information matters as much as polished packaging.</p>
             <ul className="standard-list">
-              <li><BadgeCheck size={19} /><span>Transparent Amazon checkout handoff</span></li>
+              <li><BadgeCheck size={19} /><span>Transparent Amazon and Flipkart checkout handoff</span></li>
               <li><FlaskConical size={19} /><span>Batch and quality documentation available on request</span></li>
               <li><Leaf size={19} /><span>Practical serving guidance without exaggerated promises</span></li>
             </ul>
