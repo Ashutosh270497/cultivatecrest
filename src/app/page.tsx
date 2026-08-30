@@ -75,31 +75,19 @@ export default function HomePage() {
             </div>
           </div>
 
-          <div className="hero-visual" aria-label="CultivateCrest chia and pumpkin seed packs">
-            <div className="hero-orbit hero-orbit-one" />
-            <div className="hero-orbit hero-orbit-two" />
-            <span className="hero-seal">100%<br /><small>natural</small></span>
+          <div className="hero-visual">
             <Image
-              className="hero-pack hero-pack-left"
-              src="/images/products/Chia_Seeds/chia_seeds_1.png"
-              alt="CultivateCrest premium chia seeds"
-              width={1000}
-              height={1000}
-              loading="eager"
-              sizes="(max-width: 900px) 48vw, 28vw"
+              className="hero-lifestyle-image"
+              src="/images/hero/cultivatecrest-seed-collection-v2.webp"
+              alt="CultivateCrest flax, chia, pumpkin and sunflower seed packs with their natural seeds"
+              fill
+              preload
+              sizes="(max-width: 680px) calc(100vw - 28px), (max-width: 900px) 620px, 42vw"
             />
-            <Image
-              className="hero-pack hero-pack-right"
-              src="/images/products/Pumpkin_Seeds/pump_seeds_1.png"
-              alt="CultivateCrest roasted pumpkin seeds"
-              width={1000}
-              height={1000}
-              loading="eager"
-              sizes="(max-width: 900px) 48vw, 28vw"
-            />
+            <span className="hero-seal" aria-label="Four seed essentials"><strong>4</strong><small>seed essentials</small></span>
             <div className="hero-caption">
               <Leaf size={18} aria-hidden="true" />
-              <span><strong>Simple ingredients</strong>Nothing unnecessary</span>
+              <span><strong>Four pantry essentials</strong>Chia · flax · pumpkin · sunflower</span>
             </div>
           </div>
         </div>
