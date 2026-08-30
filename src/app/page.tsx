@@ -12,6 +12,7 @@ import {
   Sparkles,
 } from "lucide-react";
 import { ProductCard } from "@/components/product-card";
+import { RemarkableWord } from "@/components/remarkable-word";
 import { SectionHeading } from "@/components/section-heading";
 import { absoluteUrl, siteConfig } from "@/config/site";
 import { journalArticles, products } from "@/lib/catalog";
@@ -52,9 +53,7 @@ export default function HomePage() {
             <p className="eyebrow"><Sparkles size={15} aria-hidden="true" /> Premium seed essentials</p>
             <h1>
               Small seeds.<br />
-              <em className="remarkable-wave" aria-label="Remarkable">
-                {"Remarkable".split("").map((letter, index) => <span aria-hidden="true" key={`${letter}-${index}`}>{letter}</span>)}
-              </em>{" "}
+              <RemarkableWord />{" "}
               everyday nutrition.
             </h1>
             <p className="hero-description">
