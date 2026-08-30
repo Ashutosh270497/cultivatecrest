@@ -65,7 +65,7 @@ export default function HomePage() {
             </div>
             <div className="hero-note">
               <div className="hero-note-icon"><PackageCheck size={19} aria-hidden="true" /></div>
-              <p><strong>Available in 200g and 500g packs</strong><span>Choose Amazon India or Flipkart</span></p>
+              <p><strong>Singles, twin packs and four-seed combos</strong><span>Choose Amazon India or Flipkart</span></p>
             </div>
           </div>
 
