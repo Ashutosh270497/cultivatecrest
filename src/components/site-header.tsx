@@ -14,6 +14,33 @@ const links = [
   { href: "/bulk-orders", label: "Bulk orders" },
 ];
 
+const announcements = [
+  { label: "Premium seed essentials, carefully packed in India" },
+  { label: "Bulk supply across India & Middle East", href: "/bulk-orders" },
+  { label: "New value combos: four smart ways to stock your seed shelf", href: "/products" },
+  { label: "Retail, gifting or distribution? Request a tailored bulk quote", href: "/bulk-orders" },
+];
+
+function AnnouncementSet({ duplicate = false }: { duplicate?: boolean }) {
+  return (
+    <div className="announcement-set" aria-hidden={duplicate || undefined}>
+      {announcements.map((announcement) => (
+        <div className="announcement-item" key={announcement.label}>
+          {announcement.href ? <Link href={announcement.href}>{announcement.label}</Link> : <span>{announcement.label}</span>}
+        </div>
+      ))}
+    </div>
+  );
+}
+
+function AmazonStoreMark() {
+  return (
+    <span className="amazon-store-mark" aria-hidden="true">
+      <Image src="/images/marketplaces/amazon.png" alt="" width={48} height={48} unoptimized />
+    </span>
+  );
+}
+
 export function SiteHeader() {
   const [open, setOpen] = useState(false);
 
@@ -47,9 +74,11 @@ export function SiteHeader() {
   return (
     <div className="site-header-stack">
       <div className="announcement-bar">
-        <div className="shell announcement-inner">
-          <span>Premium seed essentials, carefully packed in India</span>
-          <Link href="/bulk-orders">Bulk supply across India &amp; Middle East</Link>
+        <div className="announcement-marquee" aria-label="CultivateCrest highlights">
+          <div className="announcement-track">
+            <AnnouncementSet />
+            <AnnouncementSet duplicate />
+          </div>
         </div>
       </div>
       <header className="site-header">
@@ -83,7 +112,9 @@ export function SiteHeader() {
             target="_blank"
             rel="noopener noreferrer"
           >
-            Amazon store <ArrowUpRight size={16} aria-hidden="true" />
+            <AmazonStoreMark />
+            <span>Amazon Store</span>
+            <ArrowUpRight size={15} aria-hidden="true" />
           </a>
         </div>
 
@@ -96,12 +127,14 @@ export function SiteHeader() {
             ))}
           </nav>
           <a
-            className="button button-primary button-wide"
+            className="amazon-store-cta-wide"
             href={siteConfig.amazonStoreUrl}
             target="_blank"
             rel="noopener noreferrer"
           >
-            Shop on Amazon <ArrowUpRight size={17} aria-hidden="true" />
+            <AmazonStoreMark />
+            <span>Visit our Amazon Store</span>
+            <ArrowUpRight size={17} aria-hidden="true" />
           </a>
           <p>Product-specific Amazon and Flipkart checkout links are available for customers in India.</p>
         </div>

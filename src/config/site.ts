@@ -30,7 +30,7 @@ export const siteConfig = {
     instagram: "https://www.instagram.com/cultivatecrest/",
     facebook: "https://www.facebook.com/profile.php?id=61579096583214",
   },
-  amazonStoreUrl: "https://www.amazon.in/s?k=cultivatecrest",
+  amazonStoreUrl: "https://www.amazon.in/stores/CultivateCrest/page/D6E33DE0-8A27-4DA7-B7FB-0E8EC7C5161F",
 } as const;
 
 export function absoluteUrl(path = "/") {
